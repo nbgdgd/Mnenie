@@ -1,6 +1,7 @@
 // 5.2 Классификация позиции/мнения: верит / не верит / не определился.
 import { Stance } from '../types.js';
 import { BELIEVE_MARKERS, DISBELIEVE_MARKERS, NEGATORS, UNDECIDED_MARKERS } from './lexicons.js';
+import { analyzeSentiment } from './sentiment.js';
 import { containsAny, normalize, tokenize } from './text.js';
 
 export interface StanceResult {
@@ -43,7 +44,12 @@ export function classifyStance(text: string): StanceResult {
 
   const total = scores.believe + scores.disbelieve + scores.undecided;
   if (total === 0) {
-    // нет явных сигналов → склоняемся к неопределённости
+    // Нет явных маркеров доверия/недоверия. В дискуссиях (форумы, тех-обсуждения)
+    // позиция выражается тоном: согласие/одобрение ≈ доверие тезису, критика/
+    // негатив ≈ скепсис. Используем тональность как прокси, иначе — неопределённость.
+    const { score } = analyzeSentiment(text);
+    if (score >= 0.3) return { stance: 'believe', confidence: Number(Math.min(0.6, score).toFixed(3)) };
+    if (score <= -0.3) return { stance: 'disbelieve', confidence: Number(Math.min(0.6, -score).toFixed(3)) };
     return { stance: 'undecided', confidence: 0.25 };
   }
 

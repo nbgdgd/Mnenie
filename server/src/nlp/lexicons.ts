@@ -22,19 +22,31 @@ export const NEGATIVE = [
   'against', 'disagree', 'harm', 'corruption', 'manipulation', 'absurd',
 ];
 
-// Маркеры доверия новости (stance = believe)
+// Маркеры доверия новости (stance = believe).
+// Включают согласие/подтверждение в дискуссиях (для форумов вроде Hacker News,
+// где «верю» = согласен с тезисом / считаю достоверным).
 export const BELIEVE_MARKERS = [
   'верю', 'это правда', 'так и есть', 'подтверждаю', 'подтвердилось',
   'очевидно правда', 'реально', 'факт', 'достоверно', 'правдоподобно',
   'i believe', 'this is true', 'confirmed', 'it is real', 'fact', 'credible',
+  // дискуссионное согласие (en)
+  'agreed', 'i agree', 'exactly this', 'makes sense', 'good point', 'spot on',
+  'this is correct', 'well said', 'absolutely right', 'convincing', 'makes total sense',
+  'this matches', 'can confirm', 'in my experience', 'this is accurate',
 ];
 
-// Маркеры недоверия (stance = disbelieve)
+// Маркеры недоверия (stance = disbelieve).
+// Включают скепсис/несогласие в дискуссиях (сомнение в тезисе/источнике).
 export const DISBELIEVE_MARKERS = [
   'фейк', 'вброс', 'не верю', 'ложь', 'постановка', 'фотошоп', 'пропаганда',
   'манипуляция', 'обман', 'выдумка', 'неправда', 'дезинформация', 'сомнительно',
   'fake', 'hoax', 'i dont believe', "i don't believe", 'staged', 'propaganda',
   'misinformation', 'doubtful', 'debunked',
+  // дискуссионный скепсис/несогласие (en)
+  'i disagree', 'disagree', 'not convinced', 'skeptical', 'citation needed',
+  'this is wrong', 'simply wrong', 'incorrect', 'misleading', 'overblown',
+  'clickbait', 'snake oil', 'nonsense', 'not buying', 'no evidence',
+  'sounds dubious', 'i doubt', 'unsubstantiated', 'sensationalism',
 ];
 
 // Маркеры неопределённости (stance = undecided)

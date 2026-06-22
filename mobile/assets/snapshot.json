@@ -1,0 +1,3001 @@
+{
+  "generatedAt": "2026-06-22T12:33:37.133Z",
+  "cards": [
+    {
+      "news": {
+        "id": "hn-48626930",
+        "title": "Codex logging bug may write TBs to local SSDs",
+        "summary": "Обсуждение на Hacker News: 91 комментариев, 178 голосов.",
+        "url": "https://github.com/openai/codex/issues/28224",
+        "topic": "Технологии",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-22T07:30:17.000Z",
+        "sourceIds": [
+          "src-github.com",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-github.com",
+          "name": "github.com",
+          "domain": "github.com",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.9
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 38,
+        "believePct": 0,
+        "disbelievePct": 0,
+        "undecidedPct": 100,
+        "polarization": 0,
+        "truthProbability": 66,
+        "botRatio": 0,
+        "confidence": 0.92,
+        "sampleSize": 21,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 81
+          },
+          {
+            "emotion": "surprise",
+            "pct": 10
+          },
+          {
+            "emotion": "anger",
+            "pct": 5
+          },
+          {
+            "emotion": "trust",
+            "pct": 5
+          }
+        ]
+      },
+      "campaignDetected": false
+    },
+    {
+      "news": {
+        "id": "hn-48626918",
+        "title": "Investors get real-time view of UK bond market activity for the first time",
+        "summary": "Обсуждение на Hacker News: 9 комментариев, 50 голосов.",
+        "url": "https://www.fca.org.uk/news/press-releases/investors-get-real-time-view-uk-bond-market-activity-first-time",
+        "topic": "Экономика",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-22T07:29:17.000Z",
+        "sourceIds": [
+          "src-fca.org.uk",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-fca.org.uk",
+          "name": "fca.org.uk",
+          "domain": "fca.org.uk",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 34,
+        "believePct": 0,
+        "disbelievePct": 0,
+        "undecidedPct": 100,
+        "polarization": 0,
+        "truthProbability": 58,
+        "botRatio": 0,
+        "confidence": 0.58,
+        "sampleSize": 4,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 75
+          },
+          {
+            "emotion": "anger",
+            "pct": 25
+          }
+        ]
+      },
+      "campaignDetected": false
+    },
+    {
+      "news": {
+        "id": "hn-48626137",
+        "title": "Deno Desktop",
+        "summary": "Обсуждение на Hacker News: 214 комментариев, 578 голосов.",
+        "url": "https://docs.deno.com/runtime/desktop/",
+        "topic": "Технологии",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-22T05:38:40.000Z",
+        "sourceIds": [
+          "src-docs.deno.com",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-docs.deno.com",
+          "name": "docs.deno.com",
+          "domain": "docs.deno.com",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 34,
+        "believePct": 0,
+        "disbelievePct": 0,
+        "undecidedPct": 100,
+        "polarization": 0,
+        "truthProbability": 58,
+        "botRatio": 0,
+        "confidence": 0.96,
+        "sampleSize": 23,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 78
+          },
+          {
+            "emotion": "joy",
+            "pct": 9
+          },
+          {
+            "emotion": "trust",
+            "pct": 4
+          },
+          {
+            "emotion": "anger",
+            "pct": 4
+          },
+          {
+            "emotion": "fear",
+            "pct": 4
+          }
+        ]
+      },
+      "campaignDetected": false
+    },
+    {
+      "news": {
+        "id": "hn-48622867",
+        "title": "Did my old job only exist because of fraud?",
+        "summary": "Обсуждение на Hacker News: 276 комментариев, 644 голосов.",
+        "url": "https://david.newgas.net/did-my-old-job-only-exist-because-of-fraud/",
+        "topic": "Технологии",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-21T21:40:53.000Z",
+        "sourceIds": [
+          "src-david.newgas.net",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-david.newgas.net",
+          "name": "david.newgas.net",
+          "domain": "david.newgas.net",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 36,
+        "believePct": 4,
+        "disbelievePct": 9,
+        "undecidedPct": 87,
+        "polarization": 9,
+        "truthProbability": 63,
+        "botRatio": 0,
+        "confidence": 0.94,
+        "sampleSize": 24,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 71
+          },
+          {
+            "emotion": "joy",
+            "pct": 21
+          },
+          {
+            "emotion": "sadness",
+            "pct": 8
+          }
+        ]
+      },
+      "campaignDetected": false
+    },
+    {
+      "news": {
+        "id": "hn-48622778",
+        "title": "Apertus – Open Foundation Model for Sovereign AI",
+        "summary": "Обсуждение на Hacker News: 143 комментариев, 442 голосов.",
+        "url": "https://apertvs.ai/",
+        "topic": "ИИ",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-21T21:29:43.000Z",
+        "sourceIds": [
+          "src-apertvs.ai",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-apertvs.ai",
+          "name": "apertvs.ai",
+          "domain": "apertvs.ai",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 36,
+        "believePct": 4,
+        "disbelievePct": 4,
+        "undecidedPct": 92,
+        "polarization": 9,
+        "truthProbability": 66,
+        "botRatio": 0,
+        "confidence": 0.96,
+        "sampleSize": 24,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 79
+          },
+          {
+            "emotion": "anger",
+            "pct": 13
+          },
+          {
+            "emotion": "trust",
+            "pct": 4
+          },
+          {
+            "emotion": "fear",
+            "pct": 4
+          }
+        ]
+      },
+      "campaignDetected": false
+    },
+    {
+      "news": {
+        "id": "hn-48605561",
+        "title": "Help I accidentally a wigglegram",
+        "summary": "Обсуждение на Hacker News: 71 комментариев, 327 голосов.",
+        "url": "https://lmao.center/blog/wiggle-accidents/",
+        "topic": "Технологии",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-20T01:55:16.000Z",
+        "sourceIds": [
+          "src-lmao.center",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-lmao.center",
+          "name": "lmao.center",
+          "domain": "lmao.center",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 34,
+        "believePct": 0,
+        "disbelievePct": 0,
+        "undecidedPct": 100,
+        "polarization": 0,
+        "truthProbability": 58,
+        "botRatio": 0,
+        "confidence": 0.98,
+        "sampleSize": 24,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 96
+          },
+          {
+            "emotion": "joy",
+            "pct": 4
+          }
+        ]
+      },
+      "campaignDetected": false
+    },
+    {
+      "news": {
+        "id": "hn-48599998",
+        "title": "Munich 1991: The Roots of the Current AI Boom",
+        "summary": "Обсуждение на Hacker News: 41 комментариев, 107 голосов.",
+        "url": "https://people.idsia.ch/~juergen/ai-boom-roots-munich-1991.html",
+        "topic": "ИИ",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-19T15:54:23.000Z",
+        "sourceIds": [
+          "src-people.idsia.ch",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-people.idsia.ch",
+          "name": "people.idsia.ch",
+          "domain": "people.idsia.ch",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 38,
+        "believePct": 7,
+        "disbelievePct": 0,
+        "undecidedPct": 93,
+        "polarization": 0,
+        "truthProbability": 69,
+        "botRatio": 0,
+        "confidence": 0.68,
+        "sampleSize": 10,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 80
+          },
+          {
+            "emotion": "anger",
+            "pct": 10
+          },
+          {
+            "emotion": "trust",
+            "pct": 10
+          }
+        ]
+      },
+      "campaignDetected": false
+    },
+    {
+      "news": {
+        "id": "hn-48593424",
+        "title": "Writing Postcards with a 3D Printer",
+        "summary": "Обсуждение на Hacker News: 9 комментариев, 23 голосов.",
+        "url": "https://severinbucher.com/posts/writing-postcards-with-a-3d-printer/",
+        "topic": "Технологии",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-19T00:20:49.000Z",
+        "sourceIds": [
+          "src-severinbucher.com",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-severinbucher.com",
+          "name": "severinbucher.com",
+          "domain": "severinbucher.com",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 34,
+        "believePct": 0,
+        "disbelievePct": 0,
+        "undecidedPct": 100,
+        "polarization": 0,
+        "truthProbability": 58,
+        "botRatio": 0,
+        "confidence": 0.6,
+        "sampleSize": 5,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 100
+          }
+        ]
+      },
+      "campaignDetected": false
+    }
+  ],
+  "analyses": {
+    "hn-48626137": {
+      "news": {
+        "id": "hn-48626137",
+        "title": "Deno Desktop",
+        "summary": "Обсуждение на Hacker News: 214 комментариев, 578 голосов.",
+        "url": "https://docs.deno.com/runtime/desktop/",
+        "topic": "Технологии",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-22T05:38:40.000Z",
+        "sourceIds": [
+          "src-docs.deno.com",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-docs.deno.com",
+          "name": "docs.deno.com",
+          "domain": "docs.deno.com",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 34,
+        "believePct": 0,
+        "disbelievePct": 0,
+        "undecidedPct": 100,
+        "polarization": 0,
+        "truthProbability": 58,
+        "botRatio": 0,
+        "confidence": 0.96,
+        "sampleSize": 23,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 78
+          },
+          {
+            "emotion": "joy",
+            "pct": 9
+          },
+          {
+            "emotion": "trust",
+            "pct": 4
+          },
+          {
+            "emotion": "anger",
+            "pct": 4
+          },
+          {
+            "emotion": "fear",
+            "pct": 4
+          }
+        ]
+      },
+      "verdict": {
+        "verdict": "Не определились",
+        "confidence": 0.96,
+        "breakdown": {
+          "support": 13,
+          "condemn": 4,
+          "undecided": 100,
+          "fake": 0,
+          "truth": 0
+        },
+        "majorityArguments": [],
+        "minorityArguments": []
+      },
+      "timeline": [
+        {
+          "ts": "2026-06-22T07:20:46.500Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-22T08:23:01.000Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-22T09:25:15.500Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-22T10:27:30.000Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-22T11:29:44.500Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-22T12:31:59.000Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-23T00:31:59.000Z",
+          "believePct": 15,
+          "disbelievePct": 1,
+          "undecidedPct": 85,
+          "trustIndex": 28,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-23T12:31:59.000Z",
+          "believePct": 25,
+          "disbelievePct": 2,
+          "undecidedPct": 72,
+          "trustIndex": 35,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-24T00:31:59.000Z",
+          "believePct": 34,
+          "disbelievePct": 5,
+          "undecidedPct": 61,
+          "trustIndex": 41,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-24T12:31:59.000Z",
+          "believePct": 40,
+          "disbelievePct": 8,
+          "undecidedPct": 52,
+          "trustIndex": 45,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-25T00:31:59.000Z",
+          "believePct": 44,
+          "disbelievePct": 11,
+          "undecidedPct": 44,
+          "trustIndex": 48,
+          "forecast": true
+        }
+      ],
+      "geo": [
+        {
+          "country": "US",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "volume": 23
+        }
+      ],
+      "campaign": {
+        "detected": false,
+        "score": 0,
+        "botRatio": 0,
+        "kinds": [],
+        "evidence": []
+      },
+      "clusters": []
+    },
+    "hn-48626930": {
+      "news": {
+        "id": "hn-48626930",
+        "title": "Codex logging bug may write TBs to local SSDs",
+        "summary": "Обсуждение на Hacker News: 91 комментариев, 178 голосов.",
+        "url": "https://github.com/openai/codex/issues/28224",
+        "topic": "Технологии",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-22T07:30:17.000Z",
+        "sourceIds": [
+          "src-github.com",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-github.com",
+          "name": "github.com",
+          "domain": "github.com",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.9
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 38,
+        "believePct": 0,
+        "disbelievePct": 0,
+        "undecidedPct": 100,
+        "polarization": 0,
+        "truthProbability": 66,
+        "botRatio": 0,
+        "confidence": 0.92,
+        "sampleSize": 21,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 81
+          },
+          {
+            "emotion": "surprise",
+            "pct": 10
+          },
+          {
+            "emotion": "anger",
+            "pct": 5
+          },
+          {
+            "emotion": "trust",
+            "pct": 5
+          }
+        ]
+      },
+      "verdict": {
+        "verdict": "Не определились",
+        "confidence": 0.92,
+        "breakdown": {
+          "support": 15,
+          "condemn": 10,
+          "undecided": 100,
+          "fake": 0,
+          "truth": 0
+        },
+        "majorityArguments": [],
+        "minorityArguments": []
+      },
+      "timeline": [
+        {
+          "ts": "2026-06-22T08:18:47.333Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 20
+        },
+        {
+          "ts": "2026-06-22T08:57:47.666Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 20
+        },
+        {
+          "ts": "2026-06-22T09:36:48.000Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 20
+        },
+        {
+          "ts": "2026-06-22T10:15:48.333Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 20
+        },
+        {
+          "ts": "2026-06-22T10:54:48.666Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 20
+        },
+        {
+          "ts": "2026-06-22T11:33:49.000Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 20
+        },
+        {
+          "ts": "2026-06-22T23:33:49.000Z",
+          "believePct": 17,
+          "disbelievePct": 0,
+          "undecidedPct": 84,
+          "trustIndex": 31,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-23T11:33:49.000Z",
+          "believePct": 29,
+          "disbelievePct": 0,
+          "undecidedPct": 71,
+          "trustIndex": 40,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-23T23:33:49.000Z",
+          "believePct": 38,
+          "disbelievePct": 0,
+          "undecidedPct": 61,
+          "trustIndex": 47,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-24T11:33:49.000Z",
+          "believePct": 45,
+          "disbelievePct": 3,
+          "undecidedPct": 52,
+          "trustIndex": 51,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-24T23:33:49.000Z",
+          "believePct": 50,
+          "disbelievePct": 5,
+          "undecidedPct": 44,
+          "trustIndex": 55,
+          "forecast": true
+        }
+      ],
+      "geo": [
+        {
+          "country": "US",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "volume": 21
+        }
+      ],
+      "campaign": {
+        "detected": false,
+        "score": 0,
+        "botRatio": 0,
+        "kinds": [],
+        "evidence": []
+      },
+      "clusters": []
+    },
+    "hn-48605561": {
+      "news": {
+        "id": "hn-48605561",
+        "title": "Help I accidentally a wigglegram",
+        "summary": "Обсуждение на Hacker News: 71 комментариев, 327 голосов.",
+        "url": "https://lmao.center/blog/wiggle-accidents/",
+        "topic": "Технологии",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-20T01:55:16.000Z",
+        "sourceIds": [
+          "src-lmao.center",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-lmao.center",
+          "name": "lmao.center",
+          "domain": "lmao.center",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 34,
+        "believePct": 0,
+        "disbelievePct": 0,
+        "undecidedPct": 100,
+        "polarization": 0,
+        "truthProbability": 58,
+        "botRatio": 0,
+        "confidence": 0.98,
+        "sampleSize": 24,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 96
+          },
+          {
+            "emotion": "joy",
+            "pct": 4
+          }
+        ]
+      },
+      "verdict": {
+        "verdict": "Не определились",
+        "confidence": 0.98,
+        "breakdown": {
+          "support": 9,
+          "condemn": 0,
+          "undecided": 100,
+          "fake": 0,
+          "truth": 0
+        },
+        "majorityArguments": [],
+        "minorityArguments": []
+      },
+      "timeline": [
+        {
+          "ts": "2026-06-22T05:11:43.666Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-22T06:36:43.333Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-22T08:01:43.000Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-22T09:26:42.666Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-22T10:51:42.333Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-22T12:16:42.000Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-23T00:16:42.000Z",
+          "believePct": 15,
+          "disbelievePct": 1,
+          "undecidedPct": 85,
+          "trustIndex": 28,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-23T12:16:42.000Z",
+          "believePct": 25,
+          "disbelievePct": 2,
+          "undecidedPct": 72,
+          "trustIndex": 35,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-24T00:16:42.000Z",
+          "believePct": 34,
+          "disbelievePct": 5,
+          "undecidedPct": 61,
+          "trustIndex": 41,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-24T12:16:42.000Z",
+          "believePct": 40,
+          "disbelievePct": 8,
+          "undecidedPct": 52,
+          "trustIndex": 45,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-25T00:16:42.000Z",
+          "believePct": 44,
+          "disbelievePct": 11,
+          "undecidedPct": 44,
+          "trustIndex": 48,
+          "forecast": true
+        }
+      ],
+      "geo": [
+        {
+          "country": "US",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "volume": 24
+        }
+      ],
+      "campaign": {
+        "detected": false,
+        "score": 0,
+        "botRatio": 0,
+        "kinds": [],
+        "evidence": []
+      },
+      "clusters": []
+    },
+    "hn-48622867": {
+      "news": {
+        "id": "hn-48622867",
+        "title": "Did my old job only exist because of fraud?",
+        "summary": "Обсуждение на Hacker News: 276 комментариев, 644 голосов.",
+        "url": "https://david.newgas.net/did-my-old-job-only-exist-because-of-fraud/",
+        "topic": "Технологии",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-21T21:40:53.000Z",
+        "sourceIds": [
+          "src-david.newgas.net",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-david.newgas.net",
+          "name": "david.newgas.net",
+          "domain": "david.newgas.net",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 36,
+        "believePct": 4,
+        "disbelievePct": 9,
+        "undecidedPct": 87,
+        "polarization": 9,
+        "truthProbability": 63,
+        "botRatio": 0,
+        "confidence": 0.94,
+        "sampleSize": 24,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 71
+          },
+          {
+            "emotion": "joy",
+            "pct": 21
+          },
+          {
+            "emotion": "sadness",
+            "pct": 8
+          }
+        ]
+      },
+      "verdict": {
+        "verdict": "Не определились",
+        "confidence": 0.94,
+        "breakdown": {
+          "support": 9,
+          "condemn": 0,
+          "undecided": 87,
+          "fake": 9,
+          "truth": 4
+        },
+        "majorityArguments": [
+          {
+            "id": "ZGlzYmVsaWV2ZTo6",
+            "side": "disbelieve",
+            "label": "Экономические последствия",
+            "size": 1,
+            "representativeText": "I was briefly employed by a robotics company in the US ... robotics is too nice: glorified if then else is better.\nThe owner was the son of an old school magnate out of PA.\nAmong other things his line has always stuck with me: \"A whale that surfaces is soon harpooned.\"\nThe company never made money. I think the whole thing was run as a loss on purpose for tax purposes. I became tired of the head manager engineer combo (big fish in this tiny, tiny world) and left.\nEven they knew this company was never really trying to do anything serious. Strange indeed"
+          },
+          {
+            "id": "ZGlzYmVsaWV2ZTo6",
+            "side": "disbelieve",
+            "label": "Достоверность источника",
+            "size": 1,
+            "representativeText": "As someone who 'grew up' my career in Silicon Valley my first exposure to this sort of shenanigans was during the dot com bubble, where general partners at newish VC firms were fleecing limited partners (GP's got a salary to 'manage' the fund, LP's were the source of money for the funds.) They would tell the LPs well only one in ten is a real banger, looks like the fund you invested in wasn't a winner.\nIt reminded me a lot of the Bill Cosby skit about the game Keno, he used an example of a Keno Card that had two numbers on it, you picked one and took it up to the cashier with your $1 bet, the cashier drew a number and said, \"Sorry not your number, try again.\"\nThe sad truth was that a lot of people who had become wealthy because they happened to be working at a company that went public and had stock, were not particularly sophisticated when it came to the reality that even people \"like you\" were not your friends. I spent my Jr High High School years in Las Vegas and got to see so many 'confidence men' fleece tourists with so many schemes. There is a great book called 'The Confidence Game' by Maria Konnikova. It is excellent and reading it you'll come to understand that not only is it possible for even 'smart' people to be taken, there are lots of people who work on being good at it.\nBut taking all of that into consideration, if you worked at a company, did your job to the best of your ability, and it turned out that it was a \"fake\" job because some third party was using it as part of a scam, you aren't part of the scam. Any more than happening to be in a bus when the driver whose been drinking kills a pedestrian. You aren't responsible for that pedestrians death and you're not being on the bus wouldn't have changed anything. So you can let that go."
+          }
+        ],
+        "minorityArguments": [
+          {
+            "id": "YmVsaWV2ZTo60K3Q",
+            "side": "believe",
+            "label": "Экономические последствия",
+            "size": 1,
+            "representativeText": "This is a fantastic outcome - lots of money and U.S citizenship! And your product didn't even hurt anyone unlike working for Meta, in fact no one even used it!"
+          }
+        ]
+      },
+      "timeline": [
+        {
+          "ts": "2026-06-22T00:46:39.000Z",
+          "believePct": 0,
+          "disbelievePct": 11,
+          "undecidedPct": 89,
+          "trustIndex": 19
+        },
+        {
+          "ts": "2026-06-22T02:59:32.000Z",
+          "believePct": 0,
+          "disbelievePct": 10,
+          "undecidedPct": 90,
+          "trustIndex": 19
+        },
+        {
+          "ts": "2026-06-22T05:12:25.000Z",
+          "believePct": 0,
+          "disbelievePct": 17,
+          "undecidedPct": 83,
+          "trustIndex": 19
+        },
+        {
+          "ts": "2026-06-22T07:25:18.000Z",
+          "believePct": 5,
+          "disbelievePct": 10,
+          "undecidedPct": 85,
+          "trustIndex": 22
+        },
+        {
+          "ts": "2026-06-22T09:38:11.000Z",
+          "believePct": 5,
+          "disbelievePct": 10,
+          "undecidedPct": 85,
+          "trustIndex": 22
+        },
+        {
+          "ts": "2026-06-22T11:51:04.000Z",
+          "believePct": 4,
+          "disbelievePct": 9,
+          "undecidedPct": 87,
+          "trustIndex": 22
+        },
+        {
+          "ts": "2026-06-22T23:51:04.000Z",
+          "believePct": 18,
+          "disbelievePct": 8,
+          "undecidedPct": 74,
+          "trustIndex": 32,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-23T11:51:04.000Z",
+          "believePct": 29,
+          "disbelievePct": 8,
+          "undecidedPct": 63,
+          "trustIndex": 39,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-23T23:51:04.000Z",
+          "believePct": 37,
+          "disbelievePct": 9,
+          "undecidedPct": 53,
+          "trustIndex": 45,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-24T11:51:04.000Z",
+          "believePct": 44,
+          "disbelievePct": 11,
+          "undecidedPct": 45,
+          "trustIndex": 49,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-24T23:51:04.000Z",
+          "believePct": 48,
+          "disbelievePct": 13,
+          "undecidedPct": 39,
+          "trustIndex": 53,
+          "forecast": true
+        }
+      ],
+      "geo": [
+        {
+          "country": "US",
+          "believePct": 4,
+          "disbelievePct": 8,
+          "volume": 24
+        }
+      ],
+      "campaign": {
+        "detected": false,
+        "score": 0,
+        "botRatio": 0,
+        "kinds": [],
+        "evidence": []
+      },
+      "clusters": [
+        {
+          "id": "ZGlzYmVsaWV2ZTo6",
+          "side": "disbelieve",
+          "label": "Экономические последствия",
+          "size": 1,
+          "representativeText": "I was briefly employed by a robotics company in the US ... robotics is too nice: glorified if then else is better.\nThe owner was the son of an old school magnate out of PA.\nAmong other things his line has always stuck with me: \"A whale that surfaces is soon harpooned.\"\nThe company never made money. I think the whole thing was run as a loss on purpose for tax purposes. I became tired of the head manager engineer combo (big fish in this tiny, tiny world) and left.\nEven they knew this company was never really trying to do anything serious. Strange indeed"
+        },
+        {
+          "id": "YmVsaWV2ZTo60K3Q",
+          "side": "believe",
+          "label": "Экономические последствия",
+          "size": 1,
+          "representativeText": "This is a fantastic outcome - lots of money and U.S citizenship! And your product didn't even hurt anyone unlike working for Meta, in fact no one even used it!"
+        },
+        {
+          "id": "ZGlzYmVsaWV2ZTo6",
+          "side": "disbelieve",
+          "label": "Достоверность источника",
+          "size": 1,
+          "representativeText": "As someone who 'grew up' my career in Silicon Valley my first exposure to this sort of shenanigans was during the dot com bubble, where general partners at newish VC firms were fleecing limited partners (GP's got a salary to 'manage' the fund, LP's were the source of money for the funds.) They would tell the LPs well only one in ten is a real banger, looks like the fund you invested in wasn't a winner.\nIt reminded me a lot of the Bill Cosby skit about the game Keno, he used an example of a Keno Card that had two numbers on it, you picked one and took it up to the cashier with your $1 bet, the cashier drew a number and said, \"Sorry not your number, try again.\"\nThe sad truth was that a lot of people who had become wealthy because they happened to be working at a company that went public and had stock, were not particularly sophisticated when it came to the reality that even people \"like you\" were not your friends. I spent my Jr High High School years in Las Vegas and got to see so many 'confidence men' fleece tourists with so many schemes. There is a great book called 'The Confidence Game' by Maria Konnikova. It is excellent and reading it you'll come to understand that not only is it possible for even 'smart' people to be taken, there are lots of people who work on being good at it.\nBut taking all of that into consideration, if you worked at a company, did your job to the best of your ability, and it turned out that it was a \"fake\" job because some third party was using it as part of a scam, you aren't part of the scam. Any more than happening to be in a bus when the driver whose been drinking kills a pedestrian. You aren't responsible for that pedestrians death and you're not being on the bus wouldn't have changed anything. So you can let that go."
+        }
+      ]
+    },
+    "hn-48626918": {
+      "news": {
+        "id": "hn-48626918",
+        "title": "Investors get real-time view of UK bond market activity for the first time",
+        "summary": "Обсуждение на Hacker News: 9 комментариев, 50 голосов.",
+        "url": "https://www.fca.org.uk/news/press-releases/investors-get-real-time-view-uk-bond-market-activity-first-time",
+        "topic": "Экономика",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-22T07:29:17.000Z",
+        "sourceIds": [
+          "src-fca.org.uk",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-fca.org.uk",
+          "name": "fca.org.uk",
+          "domain": "fca.org.uk",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 34,
+        "believePct": 0,
+        "disbelievePct": 0,
+        "undecidedPct": 100,
+        "polarization": 0,
+        "truthProbability": 58,
+        "botRatio": 0,
+        "confidence": 0.58,
+        "sampleSize": 4,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 75
+          },
+          {
+            "emotion": "anger",
+            "pct": 25
+          }
+        ]
+      },
+      "verdict": {
+        "verdict": "Осуждают",
+        "confidence": 0.58,
+        "breakdown": {
+          "support": 0,
+          "condemn": 27,
+          "undecided": 100,
+          "fake": 0,
+          "truth": 0
+        },
+        "majorityArguments": [],
+        "minorityArguments": []
+      },
+      "timeline": [
+        {
+          "ts": "2026-06-22T10:54:32.666Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-22T11:13:34.333Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-22T11:32:36.000Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-22T11:51:37.666Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-22T12:10:39.333Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-22T12:29:41.000Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-23T00:29:41.000Z",
+          "believePct": 15,
+          "disbelievePct": 1,
+          "undecidedPct": 85,
+          "trustIndex": 28,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-23T12:29:41.000Z",
+          "believePct": 25,
+          "disbelievePct": 2,
+          "undecidedPct": 72,
+          "trustIndex": 35,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-24T00:29:41.000Z",
+          "believePct": 34,
+          "disbelievePct": 5,
+          "undecidedPct": 61,
+          "trustIndex": 41,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-24T12:29:41.000Z",
+          "believePct": 40,
+          "disbelievePct": 8,
+          "undecidedPct": 52,
+          "trustIndex": 45,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-25T00:29:41.000Z",
+          "believePct": 44,
+          "disbelievePct": 11,
+          "undecidedPct": 44,
+          "trustIndex": 48,
+          "forecast": true
+        }
+      ],
+      "geo": [
+        {
+          "country": "US",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "volume": 4
+        }
+      ],
+      "campaign": {
+        "detected": false,
+        "score": 0,
+        "botRatio": 0,
+        "kinds": [],
+        "evidence": []
+      },
+      "clusters": []
+    },
+    "hn-48622778": {
+      "news": {
+        "id": "hn-48622778",
+        "title": "Apertus – Open Foundation Model for Sovereign AI",
+        "summary": "Обсуждение на Hacker News: 143 комментариев, 442 голосов.",
+        "url": "https://apertvs.ai/",
+        "topic": "ИИ",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-21T21:29:43.000Z",
+        "sourceIds": [
+          "src-apertvs.ai",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-apertvs.ai",
+          "name": "apertvs.ai",
+          "domain": "apertvs.ai",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 36,
+        "believePct": 4,
+        "disbelievePct": 4,
+        "undecidedPct": 92,
+        "polarization": 9,
+        "truthProbability": 66,
+        "botRatio": 0,
+        "confidence": 0.96,
+        "sampleSize": 24,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 79
+          },
+          {
+            "emotion": "anger",
+            "pct": 13
+          },
+          {
+            "emotion": "trust",
+            "pct": 4
+          },
+          {
+            "emotion": "fear",
+            "pct": 4
+          }
+        ]
+      },
+      "verdict": {
+        "verdict": "Не определились",
+        "confidence": 0.96,
+        "breakdown": {
+          "support": 8,
+          "condemn": 4,
+          "undecided": 92,
+          "fake": 4,
+          "truth": 4
+        },
+        "majorityArguments": [
+          {
+            "id": "YmVsaWV2ZTo60J_R",
+            "side": "believe",
+            "label": "Прочее",
+            "size": 1,
+            "representativeText": "Knowledge cutoff is March 2024. Incredible."
+          }
+        ],
+        "minorityArguments": [
+          {
+            "id": "ZGlzYmVsaWV2ZTo6",
+            "side": "disbelieve",
+            "label": "Этика и мораль",
+            "size": 1,
+            "representativeText": "The previous version of this model has been pretty bad, but claimed to adhere to copyright laws. However, based on my testing, that's not true either. So in my view this is completely useless."
+          }
+        ]
+      },
+      "timeline": [
+        {
+          "ts": "2026-06-22T00:09:09.500Z",
+          "believePct": 0,
+          "disbelievePct": 8,
+          "undecidedPct": 92,
+          "trustIndex": 20
+        },
+        {
+          "ts": "2026-06-22T02:34:26.000Z",
+          "believePct": 5,
+          "disbelievePct": 5,
+          "undecidedPct": 90,
+          "trustIndex": 23
+        },
+        {
+          "ts": "2026-06-22T04:59:42.500Z",
+          "believePct": 5,
+          "disbelievePct": 5,
+          "undecidedPct": 90,
+          "trustIndex": 23
+        },
+        {
+          "ts": "2026-06-22T07:24:59.000Z",
+          "believePct": 4,
+          "disbelievePct": 4,
+          "undecidedPct": 92,
+          "trustIndex": 23
+        },
+        {
+          "ts": "2026-06-22T09:50:15.500Z",
+          "believePct": 4,
+          "disbelievePct": 4,
+          "undecidedPct": 92,
+          "trustIndex": 23
+        },
+        {
+          "ts": "2026-06-22T12:15:32.000Z",
+          "believePct": 4,
+          "disbelievePct": 4,
+          "undecidedPct": 92,
+          "trustIndex": 23
+        },
+        {
+          "ts": "2026-06-23T00:15:32.000Z",
+          "believePct": 20,
+          "disbelievePct": 2,
+          "undecidedPct": 78,
+          "trustIndex": 33,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-23T12:15:32.000Z",
+          "believePct": 31,
+          "disbelievePct": 2,
+          "undecidedPct": 66,
+          "trustIndex": 42,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-24T00:15:32.000Z",
+          "believePct": 40,
+          "disbelievePct": 4,
+          "undecidedPct": 56,
+          "trustIndex": 48,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-24T12:15:32.000Z",
+          "believePct": 46,
+          "disbelievePct": 6,
+          "undecidedPct": 48,
+          "trustIndex": 52,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-25T00:15:32.000Z",
+          "believePct": 51,
+          "disbelievePct": 8,
+          "undecidedPct": 41,
+          "trustIndex": 56,
+          "forecast": true
+        }
+      ],
+      "geo": [
+        {
+          "country": "US",
+          "believePct": 4,
+          "disbelievePct": 4,
+          "volume": 24
+        }
+      ],
+      "campaign": {
+        "detected": false,
+        "score": 0,
+        "botRatio": 0,
+        "kinds": [],
+        "evidence": []
+      },
+      "clusters": [
+        {
+          "id": "ZGlzYmVsaWV2ZTo6",
+          "side": "disbelieve",
+          "label": "Этика и мораль",
+          "size": 1,
+          "representativeText": "The previous version of this model has been pretty bad, but claimed to adhere to copyright laws. However, based on my testing, that's not true either. So in my view this is completely useless."
+        },
+        {
+          "id": "YmVsaWV2ZTo60J_R",
+          "side": "believe",
+          "label": "Прочее",
+          "size": 1,
+          "representativeText": "Knowledge cutoff is March 2024. Incredible."
+        }
+      ]
+    },
+    "hn-48599998": {
+      "news": {
+        "id": "hn-48599998",
+        "title": "Munich 1991: The Roots of the Current AI Boom",
+        "summary": "Обсуждение на Hacker News: 41 комментариев, 107 голосов.",
+        "url": "https://people.idsia.ch/~juergen/ai-boom-roots-munich-1991.html",
+        "topic": "ИИ",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-19T15:54:23.000Z",
+        "sourceIds": [
+          "src-people.idsia.ch",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-people.idsia.ch",
+          "name": "people.idsia.ch",
+          "domain": "people.idsia.ch",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 38,
+        "believePct": 7,
+        "disbelievePct": 0,
+        "undecidedPct": 93,
+        "polarization": 0,
+        "truthProbability": 69,
+        "botRatio": 0,
+        "confidence": 0.68,
+        "sampleSize": 10,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 80
+          },
+          {
+            "emotion": "anger",
+            "pct": 10
+          },
+          {
+            "emotion": "trust",
+            "pct": 10
+          }
+        ]
+      },
+      "verdict": {
+        "verdict": "Не определились",
+        "confidence": 0.68,
+        "breakdown": {
+          "support": 0,
+          "condemn": 0,
+          "undecided": 93,
+          "fake": 0,
+          "truth": 7
+        },
+        "majorityArguments": [
+          {
+            "id": "YmVsaWV2ZTo60KLQ",
+            "side": "believe",
+            "label": "Технические детали",
+            "size": 1,
+            "representativeText": "I believe invention of Transformers and especially Attention mechanism do have influence from past research but its not definitely only the Schmidhuber's work. Said that, if we remove the papers mentioned by Schmidhuber from history, I am quite certain that there will be no influence in the discovery of Transformers, hence his works can not be the root. He has to grow up and accept that work and equations can appear similar, looking at inverse squared law and saying Newton stole that from someone is being dishonest."
+          }
+        ],
+        "minorityArguments": []
+      },
+      "timeline": [
+        {
+          "ts": "2026-06-22T08:32:13.333Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 21
+        },
+        {
+          "ts": "2026-06-22T09:16:47.666Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 21
+        },
+        {
+          "ts": "2026-06-22T10:01:22.000Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 21
+        },
+        {
+          "ts": "2026-06-22T10:45:56.333Z",
+          "believePct": 11,
+          "disbelievePct": 0,
+          "undecidedPct": 89,
+          "trustIndex": 28
+        },
+        {
+          "ts": "2026-06-22T11:30:30.666Z",
+          "believePct": 9,
+          "disbelievePct": 0,
+          "undecidedPct": 91,
+          "trustIndex": 27
+        },
+        {
+          "ts": "2026-06-22T12:15:05.000Z",
+          "believePct": 7,
+          "disbelievePct": 0,
+          "undecidedPct": 93,
+          "trustIndex": 26
+        },
+        {
+          "ts": "2026-06-23T00:15:05.000Z",
+          "believePct": 21,
+          "disbelievePct": 0,
+          "undecidedPct": 79,
+          "trustIndex": 36,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-23T12:15:05.000Z",
+          "believePct": 33,
+          "disbelievePct": 0,
+          "undecidedPct": 67,
+          "trustIndex": 43,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-24T00:15:05.000Z",
+          "believePct": 41,
+          "disbelievePct": 2,
+          "undecidedPct": 57,
+          "trustIndex": 50,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-24T12:15:05.000Z",
+          "believePct": 48,
+          "disbelievePct": 4,
+          "undecidedPct": 49,
+          "trustIndex": 54,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-25T00:15:05.000Z",
+          "believePct": 53,
+          "disbelievePct": 6,
+          "undecidedPct": 41,
+          "trustIndex": 58,
+          "forecast": true
+        }
+      ],
+      "geo": [
+        {
+          "country": "US",
+          "believePct": 10,
+          "disbelievePct": 0,
+          "volume": 10
+        }
+      ],
+      "campaign": {
+        "detected": false,
+        "score": 0,
+        "botRatio": 0,
+        "kinds": [],
+        "evidence": []
+      },
+      "clusters": [
+        {
+          "id": "YmVsaWV2ZTo60KLQ",
+          "side": "believe",
+          "label": "Технические детали",
+          "size": 1,
+          "representativeText": "I believe invention of Transformers and especially Attention mechanism do have influence from past research but its not definitely only the Schmidhuber's work. Said that, if we remove the papers mentioned by Schmidhuber from history, I am quite certain that there will be no influence in the discovery of Transformers, hence his works can not be the root. He has to grow up and accept that work and equations can appear similar, looking at inverse squared law and saying Newton stole that from someone is being dishonest."
+        }
+      ]
+    },
+    "hn-48593424": {
+      "news": {
+        "id": "hn-48593424",
+        "title": "Writing Postcards with a 3D Printer",
+        "summary": "Обсуждение на Hacker News: 9 комментариев, 23 голосов.",
+        "url": "https://severinbucher.com/posts/writing-postcards-with-a-3d-printer/",
+        "topic": "Технологии",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-19T00:20:49.000Z",
+        "sourceIds": [
+          "src-severinbucher.com",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-severinbucher.com",
+          "name": "severinbucher.com",
+          "domain": "severinbucher.com",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 34,
+        "believePct": 0,
+        "disbelievePct": 0,
+        "undecidedPct": 100,
+        "polarization": 0,
+        "truthProbability": 58,
+        "botRatio": 0,
+        "confidence": 0.6,
+        "sampleSize": 5,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 100
+          }
+        ]
+      },
+      "verdict": {
+        "verdict": "Не определились",
+        "confidence": 0.6,
+        "breakdown": {
+          "support": 0,
+          "condemn": 0,
+          "undecided": 100,
+          "fake": 0,
+          "truth": 0
+        },
+        "majorityArguments": [],
+        "minorityArguments": []
+      },
+      "timeline": [
+        {
+          "ts": "2026-06-22T10:55:32.000Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-22T11:11:52.000Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-22T11:28:12.000Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-22T11:44:32.000Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-22T12:00:52.000Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-22T12:17:12.000Z",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "undecidedPct": 100,
+          "trustIndex": 17
+        },
+        {
+          "ts": "2026-06-23T00:17:12.000Z",
+          "believePct": 15,
+          "disbelievePct": 1,
+          "undecidedPct": 85,
+          "trustIndex": 28,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-23T12:17:12.000Z",
+          "believePct": 25,
+          "disbelievePct": 2,
+          "undecidedPct": 72,
+          "trustIndex": 35,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-24T00:17:12.000Z",
+          "believePct": 34,
+          "disbelievePct": 5,
+          "undecidedPct": 61,
+          "trustIndex": 41,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-24T12:17:12.000Z",
+          "believePct": 40,
+          "disbelievePct": 8,
+          "undecidedPct": 52,
+          "trustIndex": 45,
+          "forecast": true
+        },
+        {
+          "ts": "2026-06-25T00:17:12.000Z",
+          "believePct": 44,
+          "disbelievePct": 11,
+          "undecidedPct": 44,
+          "trustIndex": 48,
+          "forecast": true
+        }
+      ],
+      "geo": [
+        {
+          "country": "US",
+          "believePct": 0,
+          "disbelievePct": 0,
+          "volume": 5
+        }
+      ],
+      "campaign": {
+        "detected": false,
+        "score": 0,
+        "botRatio": 0,
+        "kinds": [],
+        "evidence": []
+      },
+      "clusters": []
+    }
+  },
+  "filters": {
+    "countries": [
+      "US"
+    ],
+    "topics": [
+      "ИИ",
+      "Технологии",
+      "Экономика"
+    ]
+  },
+  "stats": {
+    "totalNews": 8,
+    "avgTrustIndex": 36,
+    "avgPolarization": 2,
+    "campaignsDetected": 0,
+    "topics": 3,
+    "countries": 1
+  },
+  "controversial": [
+    {
+      "news": {
+        "id": "hn-48622867",
+        "title": "Did my old job only exist because of fraud?",
+        "summary": "Обсуждение на Hacker News: 276 комментариев, 644 голосов.",
+        "url": "https://david.newgas.net/did-my-old-job-only-exist-because-of-fraud/",
+        "topic": "Технологии",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-21T21:40:53.000Z",
+        "sourceIds": [
+          "src-david.newgas.net",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-david.newgas.net",
+          "name": "david.newgas.net",
+          "domain": "david.newgas.net",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 36,
+        "believePct": 4,
+        "disbelievePct": 9,
+        "undecidedPct": 87,
+        "polarization": 9,
+        "truthProbability": 63,
+        "botRatio": 0,
+        "confidence": 0.94,
+        "sampleSize": 24,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 71
+          },
+          {
+            "emotion": "joy",
+            "pct": 21
+          },
+          {
+            "emotion": "sadness",
+            "pct": 8
+          }
+        ]
+      },
+      "campaignDetected": false
+    },
+    {
+      "news": {
+        "id": "hn-48622778",
+        "title": "Apertus – Open Foundation Model for Sovereign AI",
+        "summary": "Обсуждение на Hacker News: 143 комментариев, 442 голосов.",
+        "url": "https://apertvs.ai/",
+        "topic": "ИИ",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-21T21:29:43.000Z",
+        "sourceIds": [
+          "src-apertvs.ai",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-apertvs.ai",
+          "name": "apertvs.ai",
+          "domain": "apertvs.ai",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 36,
+        "believePct": 4,
+        "disbelievePct": 4,
+        "undecidedPct": 92,
+        "polarization": 9,
+        "truthProbability": 66,
+        "botRatio": 0,
+        "confidence": 0.96,
+        "sampleSize": 24,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 79
+          },
+          {
+            "emotion": "anger",
+            "pct": 13
+          },
+          {
+            "emotion": "trust",
+            "pct": 4
+          },
+          {
+            "emotion": "fear",
+            "pct": 4
+          }
+        ]
+      },
+      "campaignDetected": false
+    },
+    {
+      "news": {
+        "id": "hn-48626137",
+        "title": "Deno Desktop",
+        "summary": "Обсуждение на Hacker News: 214 комментариев, 578 голосов.",
+        "url": "https://docs.deno.com/runtime/desktop/",
+        "topic": "Технологии",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-22T05:38:40.000Z",
+        "sourceIds": [
+          "src-docs.deno.com",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-docs.deno.com",
+          "name": "docs.deno.com",
+          "domain": "docs.deno.com",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 34,
+        "believePct": 0,
+        "disbelievePct": 0,
+        "undecidedPct": 100,
+        "polarization": 0,
+        "truthProbability": 58,
+        "botRatio": 0,
+        "confidence": 0.96,
+        "sampleSize": 23,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 78
+          },
+          {
+            "emotion": "joy",
+            "pct": 9
+          },
+          {
+            "emotion": "trust",
+            "pct": 4
+          },
+          {
+            "emotion": "anger",
+            "pct": 4
+          },
+          {
+            "emotion": "fear",
+            "pct": 4
+          }
+        ]
+      },
+      "campaignDetected": false
+    },
+    {
+      "news": {
+        "id": "hn-48626930",
+        "title": "Codex logging bug may write TBs to local SSDs",
+        "summary": "Обсуждение на Hacker News: 91 комментариев, 178 голосов.",
+        "url": "https://github.com/openai/codex/issues/28224",
+        "topic": "Технологии",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-22T07:30:17.000Z",
+        "sourceIds": [
+          "src-github.com",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-github.com",
+          "name": "github.com",
+          "domain": "github.com",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.9
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 38,
+        "believePct": 0,
+        "disbelievePct": 0,
+        "undecidedPct": 100,
+        "polarization": 0,
+        "truthProbability": 66,
+        "botRatio": 0,
+        "confidence": 0.92,
+        "sampleSize": 21,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 81
+          },
+          {
+            "emotion": "surprise",
+            "pct": 10
+          },
+          {
+            "emotion": "anger",
+            "pct": 5
+          },
+          {
+            "emotion": "trust",
+            "pct": 5
+          }
+        ]
+      },
+      "campaignDetected": false
+    },
+    {
+      "news": {
+        "id": "hn-48605561",
+        "title": "Help I accidentally a wigglegram",
+        "summary": "Обсуждение на Hacker News: 71 комментариев, 327 голосов.",
+        "url": "https://lmao.center/blog/wiggle-accidents/",
+        "topic": "Технологии",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-20T01:55:16.000Z",
+        "sourceIds": [
+          "src-lmao.center",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-lmao.center",
+          "name": "lmao.center",
+          "domain": "lmao.center",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 34,
+        "believePct": 0,
+        "disbelievePct": 0,
+        "undecidedPct": 100,
+        "polarization": 0,
+        "truthProbability": 58,
+        "botRatio": 0,
+        "confidence": 0.98,
+        "sampleSize": 24,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 96
+          },
+          {
+            "emotion": "joy",
+            "pct": 4
+          }
+        ]
+      },
+      "campaignDetected": false
+    },
+    {
+      "news": {
+        "id": "hn-48626918",
+        "title": "Investors get real-time view of UK bond market activity for the first time",
+        "summary": "Обсуждение на Hacker News: 9 комментариев, 50 голосов.",
+        "url": "https://www.fca.org.uk/news/press-releases/investors-get-real-time-view-uk-bond-market-activity-first-time",
+        "topic": "Экономика",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-22T07:29:17.000Z",
+        "sourceIds": [
+          "src-fca.org.uk",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-fca.org.uk",
+          "name": "fca.org.uk",
+          "domain": "fca.org.uk",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 34,
+        "believePct": 0,
+        "disbelievePct": 0,
+        "undecidedPct": 100,
+        "polarization": 0,
+        "truthProbability": 58,
+        "botRatio": 0,
+        "confidence": 0.58,
+        "sampleSize": 4,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 75
+          },
+          {
+            "emotion": "anger",
+            "pct": 25
+          }
+        ]
+      },
+      "campaignDetected": false
+    },
+    {
+      "news": {
+        "id": "hn-48599998",
+        "title": "Munich 1991: The Roots of the Current AI Boom",
+        "summary": "Обсуждение на Hacker News: 41 комментариев, 107 голосов.",
+        "url": "https://people.idsia.ch/~juergen/ai-boom-roots-munich-1991.html",
+        "topic": "ИИ",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-19T15:54:23.000Z",
+        "sourceIds": [
+          "src-people.idsia.ch",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-people.idsia.ch",
+          "name": "people.idsia.ch",
+          "domain": "people.idsia.ch",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 38,
+        "believePct": 7,
+        "disbelievePct": 0,
+        "undecidedPct": 93,
+        "polarization": 0,
+        "truthProbability": 69,
+        "botRatio": 0,
+        "confidence": 0.68,
+        "sampleSize": 10,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 80
+          },
+          {
+            "emotion": "anger",
+            "pct": 10
+          },
+          {
+            "emotion": "trust",
+            "pct": 10
+          }
+        ]
+      },
+      "campaignDetected": false
+    },
+    {
+      "news": {
+        "id": "hn-48593424",
+        "title": "Writing Postcards with a 3D Printer",
+        "summary": "Обсуждение на Hacker News: 9 комментариев, 23 голосов.",
+        "url": "https://severinbucher.com/posts/writing-postcards-with-a-3d-printer/",
+        "topic": "Технологии",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-19T00:20:49.000Z",
+        "sourceIds": [
+          "src-severinbucher.com",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-severinbucher.com",
+          "name": "severinbucher.com",
+          "domain": "severinbucher.com",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 34,
+        "believePct": 0,
+        "disbelievePct": 0,
+        "undecidedPct": 100,
+        "polarization": 0,
+        "truthProbability": 58,
+        "botRatio": 0,
+        "confidence": 0.6,
+        "sampleSize": 5,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 100
+          }
+        ]
+      },
+      "campaignDetected": false
+    }
+  ],
+  "polarized": [
+    {
+      "news": {
+        "id": "hn-48622867",
+        "title": "Did my old job only exist because of fraud?",
+        "summary": "Обсуждение на Hacker News: 276 комментариев, 644 голосов.",
+        "url": "https://david.newgas.net/did-my-old-job-only-exist-because-of-fraud/",
+        "topic": "Технологии",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-21T21:40:53.000Z",
+        "sourceIds": [
+          "src-david.newgas.net",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-david.newgas.net",
+          "name": "david.newgas.net",
+          "domain": "david.newgas.net",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 36,
+        "believePct": 4,
+        "disbelievePct": 9,
+        "undecidedPct": 87,
+        "polarization": 9,
+        "truthProbability": 63,
+        "botRatio": 0,
+        "confidence": 0.94,
+        "sampleSize": 24,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 71
+          },
+          {
+            "emotion": "joy",
+            "pct": 21
+          },
+          {
+            "emotion": "sadness",
+            "pct": 8
+          }
+        ]
+      },
+      "campaignDetected": false
+    },
+    {
+      "news": {
+        "id": "hn-48622778",
+        "title": "Apertus – Open Foundation Model for Sovereign AI",
+        "summary": "Обсуждение на Hacker News: 143 комментариев, 442 голосов.",
+        "url": "https://apertvs.ai/",
+        "topic": "ИИ",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-21T21:29:43.000Z",
+        "sourceIds": [
+          "src-apertvs.ai",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-apertvs.ai",
+          "name": "apertvs.ai",
+          "domain": "apertvs.ai",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 36,
+        "believePct": 4,
+        "disbelievePct": 4,
+        "undecidedPct": 92,
+        "polarization": 9,
+        "truthProbability": 66,
+        "botRatio": 0,
+        "confidence": 0.96,
+        "sampleSize": 24,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 79
+          },
+          {
+            "emotion": "anger",
+            "pct": 13
+          },
+          {
+            "emotion": "trust",
+            "pct": 4
+          },
+          {
+            "emotion": "fear",
+            "pct": 4
+          }
+        ]
+      },
+      "campaignDetected": false
+    },
+    {
+      "news": {
+        "id": "hn-48626137",
+        "title": "Deno Desktop",
+        "summary": "Обсуждение на Hacker News: 214 комментариев, 578 голосов.",
+        "url": "https://docs.deno.com/runtime/desktop/",
+        "topic": "Технологии",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-22T05:38:40.000Z",
+        "sourceIds": [
+          "src-docs.deno.com",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-docs.deno.com",
+          "name": "docs.deno.com",
+          "domain": "docs.deno.com",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 34,
+        "believePct": 0,
+        "disbelievePct": 0,
+        "undecidedPct": 100,
+        "polarization": 0,
+        "truthProbability": 58,
+        "botRatio": 0,
+        "confidence": 0.96,
+        "sampleSize": 23,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 78
+          },
+          {
+            "emotion": "joy",
+            "pct": 9
+          },
+          {
+            "emotion": "trust",
+            "pct": 4
+          },
+          {
+            "emotion": "anger",
+            "pct": 4
+          },
+          {
+            "emotion": "fear",
+            "pct": 4
+          }
+        ]
+      },
+      "campaignDetected": false
+    },
+    {
+      "news": {
+        "id": "hn-48626930",
+        "title": "Codex logging bug may write TBs to local SSDs",
+        "summary": "Обсуждение на Hacker News: 91 комментариев, 178 голосов.",
+        "url": "https://github.com/openai/codex/issues/28224",
+        "topic": "Технологии",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-22T07:30:17.000Z",
+        "sourceIds": [
+          "src-github.com",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-github.com",
+          "name": "github.com",
+          "domain": "github.com",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.9
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 38,
+        "believePct": 0,
+        "disbelievePct": 0,
+        "undecidedPct": 100,
+        "polarization": 0,
+        "truthProbability": 66,
+        "botRatio": 0,
+        "confidence": 0.92,
+        "sampleSize": 21,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 81
+          },
+          {
+            "emotion": "surprise",
+            "pct": 10
+          },
+          {
+            "emotion": "anger",
+            "pct": 5
+          },
+          {
+            "emotion": "trust",
+            "pct": 5
+          }
+        ]
+      },
+      "campaignDetected": false
+    },
+    {
+      "news": {
+        "id": "hn-48605561",
+        "title": "Help I accidentally a wigglegram",
+        "summary": "Обсуждение на Hacker News: 71 комментариев, 327 голосов.",
+        "url": "https://lmao.center/blog/wiggle-accidents/",
+        "topic": "Технологии",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-20T01:55:16.000Z",
+        "sourceIds": [
+          "src-lmao.center",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-lmao.center",
+          "name": "lmao.center",
+          "domain": "lmao.center",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 34,
+        "believePct": 0,
+        "disbelievePct": 0,
+        "undecidedPct": 100,
+        "polarization": 0,
+        "truthProbability": 58,
+        "botRatio": 0,
+        "confidence": 0.98,
+        "sampleSize": 24,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 96
+          },
+          {
+            "emotion": "joy",
+            "pct": 4
+          }
+        ]
+      },
+      "campaignDetected": false
+    },
+    {
+      "news": {
+        "id": "hn-48626918",
+        "title": "Investors get real-time view of UK bond market activity for the first time",
+        "summary": "Обсуждение на Hacker News: 9 комментариев, 50 голосов.",
+        "url": "https://www.fca.org.uk/news/press-releases/investors-get-real-time-view-uk-bond-market-activity-first-time",
+        "topic": "Экономика",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-22T07:29:17.000Z",
+        "sourceIds": [
+          "src-fca.org.uk",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-fca.org.uk",
+          "name": "fca.org.uk",
+          "domain": "fca.org.uk",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 34,
+        "believePct": 0,
+        "disbelievePct": 0,
+        "undecidedPct": 100,
+        "polarization": 0,
+        "truthProbability": 58,
+        "botRatio": 0,
+        "confidence": 0.58,
+        "sampleSize": 4,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 75
+          },
+          {
+            "emotion": "anger",
+            "pct": 25
+          }
+        ]
+      },
+      "campaignDetected": false
+    },
+    {
+      "news": {
+        "id": "hn-48599998",
+        "title": "Munich 1991: The Roots of the Current AI Boom",
+        "summary": "Обсуждение на Hacker News: 41 комментариев, 107 голосов.",
+        "url": "https://people.idsia.ch/~juergen/ai-boom-roots-munich-1991.html",
+        "topic": "ИИ",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-19T15:54:23.000Z",
+        "sourceIds": [
+          "src-people.idsia.ch",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-people.idsia.ch",
+          "name": "people.idsia.ch",
+          "domain": "people.idsia.ch",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 38,
+        "believePct": 7,
+        "disbelievePct": 0,
+        "undecidedPct": 93,
+        "polarization": 0,
+        "truthProbability": 69,
+        "botRatio": 0,
+        "confidence": 0.68,
+        "sampleSize": 10,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 80
+          },
+          {
+            "emotion": "anger",
+            "pct": 10
+          },
+          {
+            "emotion": "trust",
+            "pct": 10
+          }
+        ]
+      },
+      "campaignDetected": false
+    },
+    {
+      "news": {
+        "id": "hn-48593424",
+        "title": "Writing Postcards with a 3D Printer",
+        "summary": "Обсуждение на Hacker News: 9 комментариев, 23 голосов.",
+        "url": "https://severinbucher.com/posts/writing-postcards-with-a-3d-printer/",
+        "topic": "Технологии",
+        "country": "US",
+        "language": "en",
+        "publishedAt": "2026-06-19T00:20:49.000Z",
+        "sourceIds": [
+          "src-severinbucher.com",
+          "hn"
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-severinbucher.com",
+          "name": "severinbucher.com",
+          "domain": "severinbucher.com",
+          "type": "media",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        },
+        {
+          "id": "hn",
+          "name": "Hacker News",
+          "domain": "news.ycombinator.com",
+          "type": "forum",
+          "country": "US",
+          "politicalBias": 0,
+          "reliabilityScore": 0.55
+        }
+      ],
+      "metrics": {
+        "trustIndex": 34,
+        "believePct": 0,
+        "disbelievePct": 0,
+        "undecidedPct": 100,
+        "polarization": 0,
+        "truthProbability": 58,
+        "botRatio": 0,
+        "confidence": 0.6,
+        "sampleSize": 5,
+        "emotions": [
+          {
+            "emotion": "neutral",
+            "pct": 100
+          }
+        ]
+      },
+      "campaignDetected": false
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 import { Text } from 'react-native';
 import { COLORS } from './src/theme';
+import CommentsScreen from './src/screens/CommentsScreen';
 import DetailScreen from './src/screens/DetailScreen';
 import FeedScreen from './src/screens/FeedScreen';
 import RankingsScreen from './src/screens/RankingsScreen';
@@ -38,6 +39,11 @@ function FeedStack() {
         component={DetailScreen}
         options={({ route }: any) => ({ title: route.params?.title ?? 'Новость', headerBackTitle: 'Лента' })}
       />
+      <Stack.Screen
+        name="Comments"
+        component={CommentsScreen}
+        options={{ title: '🗣 Анализ комментариев', headerBackTitle: 'Назад' }}
+      />
     </Stack.Navigator>
   );
 }
@@ -50,6 +56,11 @@ function RankingsStack() {
         name="Detail"
         component={DetailScreen}
         options={({ route }: any) => ({ title: route.params?.title ?? 'Новость' })}
+      />
+      <Stack.Screen
+        name="Comments"
+        component={CommentsScreen}
+        options={{ title: '🗣 Анализ комментариев', headerBackTitle: 'Назад' }}
       />
     </Stack.Navigator>
   );

@@ -98,6 +98,65 @@ export interface NewsCard {
   campaignDetected: boolean;
 }
 
+// ---- Comments Analytics ----
+export type CommentSentiment = 'support' | 'against' | 'neutral';
+export type InfluenceFlag = 'low' | 'medium' | 'high';
+export type CommentClusterKind = 'support' | 'opposition' | 'neutral' | 'minority' | 'suspicious';
+
+export interface CommentDetail {
+  id: string;
+  author: string;
+  text: string;
+  createdAt: string;
+  sentiment: CommentSentiment;
+  sentimentScore: number;
+  emotion: Emotion;
+  controversyScore: number;
+  botProbability: number;
+  influence: InfluenceFlag;
+  isRepetitive: boolean;
+  duplicateOf: string | null;
+  cluster: CommentClusterKind;
+  likes: number;
+}
+
+export interface CommentClusterGroup {
+  kind: CommentClusterKind;
+  label: string;
+  size: number;
+  sharePct: number;
+  sentiment: CommentSentiment | 'mixed';
+  representative: string;
+  commentIds: string[];
+}
+
+export interface InfluenceSignal {
+  kind: 'coordinated' | 'propaganda_repetition' | 'sentiment_spike' | 'velocity_anomaly';
+  label: string;
+  severity: InfluenceFlag;
+  detail: string;
+  score: number;
+}
+
+export interface CommentsSummary {
+  totalComments: number;
+  supportPct: number;
+  againstPct: number;
+  neutralPct: number;
+  controversialPct: number;
+  botLikelihoodPct: number;
+  influenceScorePct: number;
+}
+
+export interface CommentsAnalytics {
+  newsId: string;
+  summary: CommentsSummary;
+  clusters: CommentClusterGroup[];
+  influence: { score: number; flag: InfluenceFlag; signals: InfluenceSignal[] };
+  heatmap: number[];
+  comments: CommentDetail[];
+}
+
 export interface Filters { countries: string[]; topics: string[]; }
 
 export interface Stats {

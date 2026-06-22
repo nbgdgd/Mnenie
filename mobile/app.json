@@ -6,7 +6,9 @@
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
     "scheme": "mnenie",
+    "icon": "./assets/icon.png",
     "splash": {
+      "image": "./assets/splash-icon.png",
       "backgroundColor": "#0b1120",
       "resizeMode": "contain"
     },
@@ -14,6 +16,7 @@
     "android": {
       "package": "app.mnenie.android",
       "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-foreground.png",
         "backgroundColor": "#0b1120"
       }
     },

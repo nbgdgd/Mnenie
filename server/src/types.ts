@@ -152,3 +152,76 @@ export interface NewsCard {
   metrics: NewsMetrics;
   campaignDetected: boolean;
 }
+
+// ----- Comments Analytics (анализ комментариев) -----
+
+export type CommentSentiment = 'support' | 'against' | 'neutral';
+export type InfluenceFlag = 'low' | 'medium' | 'high';
+export type CommentClusterKind =
+  | 'support'
+  | 'opposition'
+  | 'neutral'
+  | 'minority'
+  | 'suspicious';
+
+/** Один комментарий со всеми маркерами анализа. */
+export interface CommentDetail {
+  id: string;
+  author: string;
+  text: string;
+  createdAt: string; // ISO
+  sentiment: CommentSentiment;
+  sentimentScore: number; // -1..1
+  emotion: Emotion;
+  controversyScore: number; // 0..100 — конфликт с основным мнением
+  botProbability: number; // 0..100
+  influence: InfluenceFlag; // вклад в координацию мнений
+  isRepetitive: boolean; // найден near-dup
+  duplicateOf: string | null; // id похожего комментария
+  cluster: CommentClusterKind;
+  likes: number;
+}
+
+/** Группа комментариев (кластер). Меньшинство НЕ удаляется — отдельная группа. */
+export interface CommentClusterGroup {
+  kind: CommentClusterKind;
+  label: string;
+  size: number;
+  sharePct: number; // % от всех комментариев
+  sentiment: CommentSentiment | 'mixed';
+  representative: string; // репрезентативная цитата
+  commentIds: string[];
+}
+
+/** Сигнал системы выявления влияния. */
+export interface InfluenceSignal {
+  kind: 'coordinated' | 'propaganda_repetition' | 'sentiment_spike' | 'velocity_anomaly';
+  label: string;
+  severity: InfluenceFlag;
+  detail: string;
+  score: number; // 0..100
+}
+
+export interface CommentsSummary {
+  totalComments: number;
+  supportPct: number;
+  againstPct: number;
+  neutralPct: number;
+  controversialPct: number; // доля противоречивых
+  botLikelihoodPct: number; // средняя бот-вероятность по обсуждению
+  influenceScorePct: number; // насколько обсуждение под влиянием координации
+}
+
+export interface CommentsAnalytics {
+  newsId: string;
+  summary: CommentsSummary;
+  clusters: CommentClusterGroup[];
+  influence: {
+    score: number; // 0..100
+    flag: InfluenceFlag;
+    signals: InfluenceSignal[];
+  };
+  /** Контроверсивность по временным корзинам (0..100) — для heatmap. */
+  heatmap: number[];
+  comments: CommentDetail[];
+}

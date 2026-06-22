@@ -198,6 +198,57 @@ geo_opinion(news_id, country, believe_pct, disbelieve_pct, volume)
 
 ---
 
+## 5bis. COMMENTS ANALYTICS (анализ комментариев)
+
+Отдельный экран и пайплайн для глубокого анализа обсуждения под новостью.
+Код: `server/src/analysis/comments.ts`, типы — `CommentsAnalytics`.
+
+### Backend-архитектура
+```
+comments (RawComment[])
+   │
+   ▼  analyzeCommentsAnalytics(newsId, comments)
+   ├─ per-comment NLP: sentiment → stance → emotion → bot-score → near-dup
+   ├─ controversy: конфликт с мажоритарным мнением + сила тона + токсичность
+   ├─ influence (per-comment): bot × repetition × охват  → low/medium/high
+   ├─ кластеризация (партиция, приоритет): suspicious → minority → support/opposition/neutral
+   ├─ INFLUENCE DETECTION: coordinated / propaganda-repetition / sentiment-spike / velocity
+   └─ heatmap контроверсивности по временным корзинам
+   ▼
+CommentsAnalytics {summary, clusters, influence, heatmap, comments[]}
+```
+Кэш в `store.ts` (`getCommentsAnalytics`), оффлайн-снапшот для мобильного
+приложения формируется при `npm run ingest`.
+
+### ML-пайплайн (на комментарий)
+1. **Sentiment** (лексикон + отрицания/усилители) → score −1..1.
+2. **Stance** (маркеры доверия/недоверия + тон-fallback) сдвигает score.
+3. **support / against / neutral** = знак итогового lean (порог ±0.15).
+4. **Controversy (0–100)** = конфликт с мажоритарным направлением (×) + |score| +
+   токсичность + гнев/отвращение.
+5. **Bot-probability (0–100)** = эвристика по возрасту аккаунта, частоте,
+   near-dup, шаблонности, хэндлу (`botDetection.ts`).
+6. **Influence (low/med/high)** = bot × repetition × охват (лайки).
+7. **Repetition** = SimHash-отпечаток встречается ≥2 раз (`duplicateOf`).
+8. `[PROD]`: трансформер stance/ABSA, эмбеддинги + HDBSCAN для кластеров,
+   GNN на графе аккаунтов для координации.
+
+### Кластеры (меньшинство сохраняется отдельно)
+Партиция по приоритету, чтобы редкие голоса не растворялись:
+`Подозрительные/повторяющиеся` → `Меньшинство/редкие` → `Основная поддержка` /
+`Основная оппозиция` / `Нейтральные`.
+
+### INFLUENCE DETECTION SYSTEM
+- **coordinated** — доля вероятных ботов;
+- **propaganda_repetition** — группы near-dup сообщений;
+- **sentiment_spike** — окно с резким перекосом одного мнения;
+- **velocity_anomaly** — пик/медиана сообщений (всплеск интереса — обычно
+  органический, поэтому НЕ формирует influence-score сам по себе, только
+  усиливает фон при наличии ботов/повторов).
+Итоговый `influenceScorePct` — взвешенная комбинация манипулятивных признаков.
+
+---
+
 ## 6. API
 
 REST (`/api`) + WebSocket для live-обновлений. Полный список — `API.md`.
@@ -212,6 +263,7 @@ REST (`/api`) + WebSocket для live-обновлений. Полный спи�
 | GET | `/api/news/:id/sources` | сравнение источников |
 | GET | `/api/news/:id/geo` | карта распространения мнений |
 | GET | `/api/news/:id/campaigns` | обнаруженные кампании/боты |
+| GET | `/api/news/:id/comments` | **COMMENTS ANALYTICS** (фильтр: `filter=`) |
 | GET | `/api/rankings/controversial` | рейтинг самых спорных |
 | GET | `/api/rankings/polarized` | рейтинг по поляризации |
 | GET | `/api/filters` | доступные страны/темы |
@@ -236,6 +288,13 @@ REST (`/api`) + WebSocket для live-обновлений. Полный спи�
 8. **Кампании/боты** — индикаторы координации, доля ботов, доказательства.
 9. **Рейтинги** — самые спорные / самые поляризующие новости.
 10. **Аналитика платформы** — общие тренды.
+11. **COMMENTS ANALYTICS** — дашборд по комментариям новости: полоса и pie
+    support/against/neutral, плитки (противоречивые %, бот-вероятность %,
+    influence %), карта контроверсивности (heatmap), панель INFLUENCE DETECTION
+    с сигналами, кластеры мнений (включая меньшинство), лента комментариев с
+    фильтрами (все/поддержка/против/противоречивые/подозрительные/меньшинство) и
+    маркерами на каждом (sentiment, controversy, bot %, influence, повтор).
+    Противоречивые — красная рамка, подозрительные — предупреждающий цвет.
 
 Дизайн: тёмная минималистичная тема, акцент на данных, доступные контрасты,
 скелетоны при загрузке.

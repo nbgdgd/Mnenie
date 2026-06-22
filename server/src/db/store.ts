@@ -4,8 +4,9 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { News, NewsAnalysis, NewsCard, RawComment, Source } from '../types.js';
+import { CommentsAnalytics, News, NewsAnalysis, NewsCard, RawComment, Source } from '../types.js';
 import { analyzeNews } from '../analysis/engine.js';
+import { analyzeCommentsAnalytics } from '../analysis/comments.js';
 import {
   comments as seedComments,
   news as seedNews,
@@ -63,6 +64,18 @@ export function getAnalysis(newsId: string): NewsAnalysis | null {
 
 export function getAllAnalyses(): NewsAnalysis[] {
   return news.map((n) => getAnalysis(n.id)!).filter(Boolean);
+}
+
+const commentsCache = new Map<string, CommentsAnalytics>();
+
+/** Полная аналитика комментариев новости (экран COMMENTS ANALYTICS). */
+export function getCommentsAnalytics(newsId: string): CommentsAnalytics | null {
+  if (commentsCache.has(newsId)) return commentsCache.get(newsId)!;
+  const n = news.find((x) => x.id === newsId);
+  if (!n) return null;
+  const result = analyzeCommentsAnalytics(newsId, commentsByNews.get(newsId) || []);
+  commentsCache.set(newsId, result);
+  return result;
 }
 
 export function toCard(a: NewsAnalysis): NewsCard {

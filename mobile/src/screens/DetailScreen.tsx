@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { api } from '../api';
 import { BarChart } from '../components/BarChart';
 import { Donut } from '../components/Donut';
@@ -9,7 +9,7 @@ import { Badge, Metric, Section, StanceBar } from '../components/common';
 import { COLORS, EMOTION_LABELS } from '../theme';
 import type { NewsAnalysis } from '../types';
 
-export default function DetailScreen({ route }: { route: any }) {
+export default function DetailScreen({ route, navigation }: { route: any; navigation: any }) {
   const { id } = route.params as { id: string };
   const [data, setData] = useState<NewsAnalysis | null>(null);
   const [error, setError] = useState(false);
@@ -55,6 +55,19 @@ export default function DetailScreen({ route }: { route: any }) {
       <Text style={styles.title}>{news.title}</Text>
       <Text style={styles.summary}>{news.summary}</Text>
       <Text style={styles.sources}>Источники: {sources.map((s) => s.name).join(', ')}</Text>
+
+      <Pressable
+        style={styles.commentsBtn}
+        onPress={() => navigation.navigate('Comments', { id, title: news.title })}
+      >
+        <View style={{ flex: 1 }}>
+          <Text style={styles.commentsBtnTitle}>🗣 Анализ комментариев</Text>
+          <Text style={styles.commentsBtnSub}>
+            {metrics.sampleSize} реакций · мнения, кластеры, выявление влияния
+          </Text>
+        </View>
+        <Text style={styles.commentsBtnArrow}>→</Text>
+      </Pressable>
 
       <Section title="Индекс доверия">
         <View style={{ alignItems: 'center' }}>
@@ -168,6 +181,14 @@ const styles = StyleSheet.create({
   title: { color: COLORS.text, fontSize: 22, fontWeight: '700', lineHeight: 28 },
   summary: { color: COLORS.muted, fontSize: 14, lineHeight: 21, marginTop: 8 },
   sources: { color: COLORS.muted, fontSize: 12, marginTop: 10, marginBottom: 14 },
+  commentsBtn: {
+    flexDirection: 'row', alignItems: 'center', gap: 12,
+    backgroundColor: '#1d4ed822', borderColor: COLORS.accent, borderWidth: 1,
+    borderRadius: 14, padding: 16, marginBottom: 14,
+  },
+  commentsBtnTitle: { color: COLORS.text, fontSize: 16, fontWeight: '700' },
+  commentsBtnSub: { color: COLORS.muted, fontSize: 12, marginTop: 3 },
+  commentsBtnArrow: { color: COLORS.accent, fontSize: 22, fontWeight: '700' },
   metricGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
   verdictLabel: { color: COLORS.muted, fontSize: 13 },
   verdictValue: { color: COLORS.accent, fontSize: 24, fontWeight: '700', marginVertical: 6 },

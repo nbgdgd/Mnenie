@@ -58,6 +58,51 @@ CREATE TABLE comment_analysis (
     weight              REAL NOT NULL DEFAULT 1
 );
 
+-- Экран COMMENTS ANALYTICS: per-comment маркеры для ленты с фильтрами.
+-- support/against/neutral, контроверсивность, бот-вероятность, влияние, повтор.
+CREATE TABLE comment_markers (
+    comment_id        TEXT PRIMARY KEY REFERENCES comments(id),
+    news_id           TEXT NOT NULL REFERENCES news(id),
+    sentiment         TEXT NOT NULL CHECK (sentiment IN ('support','against','neutral')),
+    controversy_score INTEGER NOT NULL,                    -- 0..100
+    bot_probability   INTEGER NOT NULL,                    -- 0..100
+    influence         TEXT NOT NULL CHECK (influence IN ('low','medium','high')),
+    is_repetitive     BOOLEAN NOT NULL DEFAULT false,
+    duplicate_of      TEXT REFERENCES comments(id),        -- репрезентант near-dup
+    cluster_kind      TEXT NOT NULL CHECK (cluster_kind IN
+                        ('support','opposition','neutral','minority','suspicious'))
+);
+CREATE INDEX idx_markers_news ON comment_markers(news_id, cluster_kind);
+
+-- Агрегированная сводка комментариев по новости (кэш для дашборда).
+CREATE TABLE comments_summary (
+    news_id           TEXT PRIMARY KEY REFERENCES news(id),
+    total_comments    INTEGER NOT NULL,
+    support_pct       INTEGER NOT NULL,
+    against_pct       INTEGER NOT NULL,
+    neutral_pct       INTEGER NOT NULL,
+    controversial_pct INTEGER NOT NULL,
+    bot_likelihood    INTEGER NOT NULL,                    -- средняя бот-вероятность
+    influence_score   INTEGER NOT NULL,                    -- 0..100
+    influence_flag    TEXT NOT NULL CHECK (influence_flag IN ('low','medium','high')),
+    heatmap           JSONB,                               -- контроверсивность по корзинам
+    updated_at        TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+-- Сигналы системы выявления влияния (ИПСО) для обсуждения.
+CREATE TABLE influence_signals (
+    id          BIGSERIAL PRIMARY KEY,
+    news_id     TEXT NOT NULL REFERENCES news(id),
+    kind        TEXT NOT NULL CHECK (kind IN
+                  ('coordinated','propaganda_repetition','sentiment_spike','velocity_anomaly')),
+    label       TEXT NOT NULL,
+    severity    TEXT NOT NULL CHECK (severity IN ('low','medium','high')),
+    detail      TEXT,
+    score       INTEGER NOT NULL,                          -- 0..100
+    detected_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+CREATE INDEX idx_influence_news ON influence_signals(news_id);
+
 CREATE TABLE news_metrics (
     news_id           TEXT PRIMARY KEY REFERENCES news(id),
     trust_index       REAL NOT NULL,

@@ -1,6 +1,14 @@
 // REST API Mnenie. См. ARCHITECTURE.md §6.
 import { Router } from 'express';
-import { allSources, getAllAnalyses, getAnalysis, listFilters, toCard } from '../db/store.js';
+import {
+  allSources,
+  getAllAnalyses,
+  getAnalysis,
+  getCommentsAnalytics,
+  listFilters,
+  toCard,
+} from '../db/store.js';
+import { CommentDetail } from '../types.js';
 
 export const api = Router();
 
@@ -120,4 +128,33 @@ api.get('/news/:id/campaigns', (req, res) => {
   const a = getAnalysis(req.params.id);
   if (!a) return res.status(404).json({ error: 'not found' });
   res.json(a.campaign);
+});
+
+// Экран COMMENTS ANALYTICS: сводка, кластеры, влияние, heatmap, лента с маркерами.
+// ?filter=support|against|neutral|controversial|suspicious|minority — фильтр ленты.
+function filterComments(comments: CommentDetail[], filter?: string): CommentDetail[] {
+  switch (filter) {
+    case 'support':
+      return comments.filter((c) => c.sentiment === 'support');
+    case 'against':
+      return comments.filter((c) => c.sentiment === 'against');
+    case 'neutral':
+      return comments.filter((c) => c.sentiment === 'neutral');
+    case 'controversial':
+      return comments.filter((c) => c.controversyScore >= 60);
+    case 'suspicious':
+      return comments.filter((c) => c.cluster === 'suspicious');
+    case 'minority':
+      return comments.filter((c) => c.cluster === 'minority');
+    default:
+      return comments;
+  }
+}
+
+api.get('/news/:id/comments', (req, res) => {
+  const analytics = getCommentsAnalytics(req.params.id);
+  if (!analytics) return res.status(404).json({ error: 'not found' });
+  const { filter } = req.query as Record<string, string>;
+  if (!filter) return res.json(analytics);
+  res.json({ ...analytics, comments: filterComments(analytics.comments, filter) });
 });

@@ -96,4 +96,56 @@ Query-параметры:
   "evidence": ["Доля подозрительных аккаунтов: 39%", "..."] }
 ```
 
+## COMMENTS ANALYTICS
+
+### `GET /api/news/:id/comments`
+Полная аналитика комментариев для экрана COMMENTS ANALYTICS: сводка,
+кластеры, система выявления влияния, heatmap и лента с маркерами.
+
+Query-параметр `filter` фильтрует ленту `comments` (сводка/кластеры/влияние
+не меняются):
+`support` | `against` | `neutral` | `controversial` | `suspicious` | `minority`.
+
+Ответ — `CommentsAnalytics`:
+```json
+{
+  "newsId": "hn-123",
+  "summary": {
+    "totalComments": 31, "supportPct": 23, "againstPct": 68, "neutralPct": 9,
+    "controversialPct": 13, "botLikelihoodPct": 42, "influenceScorePct": 62
+  },
+  "clusters": [
+    { "kind": "opposition", "label": "Основная оппозиция", "size": 4,
+      "sharePct": 13, "sentiment": "against", "representative": "...",
+      "commentIds": ["c-1","c-2"] },
+    { "kind": "minority", "label": "Меньшинство / редкие мнения", "size": 5, "sharePct": 16, "...": "" },
+    { "kind": "suspicious", "label": "Подозрительные / повторяющиеся", "size": 19, "sharePct": 61, "...": "" }
+  ],
+  "influence": {
+    "score": 62, "flag": "high",
+    "signals": [
+      { "kind": "coordinated", "label": "Координированная сеть",
+        "severity": "medium", "detail": "42% комментариев похожи на ботов", "score": 55 },
+      { "kind": "propaganda_repetition", "label": "Повторяющиеся шаблоны",
+        "severity": "high", "detail": "Групп одинаковых сообщений: 1 (42% потока)", "score": 67 },
+      { "kind": "sentiment_spike", "label": "Всплеск одного мнения",
+        "severity": "high", "detail": "В одном окне до 100% реакций в одну сторону", "score": 80 }
+    ]
+  },
+  "heatmap": [17, 0, 18, 18, 0, 18, 21, 18],
+  "comments": [
+    { "id": "c-1", "author": "user42", "text": "...", "createdAt": "2026-06-20T14:30:00Z",
+      "sentiment": "against", "sentimentScore": -0.4, "emotion": "anger",
+      "controversyScore": 72, "botProbability": 80, "influence": "high",
+      "isRepetitive": true, "duplicateOf": "c-0", "cluster": "suspicious", "likes": 0 }
+  ]
+}
+```
+
+Маркеры комментария: `sentiment` (support/against/neutral), `controversyScore`
+(0–100), `botProbability` (0–100), `influence` (low/medium/high), `isRepetitive`
+(+ `duplicateOf`), `cluster`. UI подсвечивает противоречивые красной рамкой,
+подозрительные — предупреждающим цветом. Меньшинство НЕ удаляется — отдельный
+кластер и фильтр.
+
 Ошибки: `404 { "error": "not found" }` для несуществующего `:id`.

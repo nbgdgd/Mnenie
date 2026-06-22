@@ -30,3 +30,37 @@ export function trustColor(v: number): string {
   if (v >= 40) return COLORS.warn;
   return COLORS.disbelieve;
 }
+
+// ---- Comments Analytics ----
+export const SENTIMENT_COLOR: Record<'support' | 'against' | 'neutral', string> = {
+  support: COLORS.believe,
+  against: COLORS.disbelieve,
+  neutral: COLORS.undecided,
+};
+
+export const SENTIMENT_LABEL: Record<'support' | 'against' | 'neutral', string> = {
+  support: 'Поддержка',
+  against: 'Против',
+  neutral: 'Нейтрально',
+};
+
+export const FLAG_COLOR: Record<'low' | 'medium' | 'high', string> = {
+  low: COLORS.muted,
+  medium: COLORS.warn,
+  high: COLORS.disbelieve,
+};
+
+export const FLAG_LABEL: Record<'low' | 'medium' | 'high', string> = {
+  low: 'низкое',
+  medium: 'среднее',
+  high: 'высокое',
+};
+
+// цвет ячейки heatmap по уровню контроверсивности (0..100)
+export function heatColor(v: number): string {
+  if (v >= 70) return '#ef4444';
+  if (v >= 45) return '#f59e0b';
+  if (v >= 25) return '#3b82f6';
+  if (v > 0) return '#1e3a5f';
+  return '#162033';
+}

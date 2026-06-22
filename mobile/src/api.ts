@@ -1,5 +1,5 @@
 import Constants from 'expo-constants';
-import type { Filters, NewsAnalysis, NewsCard, Stats } from './types';
+import type { CommentsAnalytics, Filters, NewsAnalysis, NewsCard, Stats } from './types';
 import snapshot from '../assets/snapshot.json';
 
 // Базовый адрес backend (если запущен). По умолчанию — 10.0.2.2 (host-машина из
@@ -16,6 +16,7 @@ interface Snapshot {
   generatedAt: string;
   cards: NewsCard[];
   analyses: Record<string, NewsAnalysis>;
+  commentsAnalytics: Record<string, CommentsAnalytics>;
   filters: Filters;
   stats: Stats;
   controversial: NewsCard[];
@@ -64,6 +65,7 @@ function localFeed(q: FeedQuery = {}): NewsCard[] {
 const local = {
   feed: (q: FeedQuery = {}) => localFeed(q),
   news: (id: string) => SNAP.analyses[id] ?? null,
+  comments: (id: string) => SNAP.commentsAnalytics?.[id] ?? null,
   filters: () => SNAP.filters,
   stats: () => SNAP.stats,
   controversial: () => SNAP.controversial,
@@ -100,6 +102,13 @@ export const api = {
     if (live) return live;
     const offline = local.news(id);
     if (!offline) throw new Error(`Новость ${id} не найдена в офлайн-данных`);
+    return offline;
+  },
+  async comments(id: string): Promise<CommentsAnalytics> {
+    const live = await tryGet<CommentsAnalytics>(`/news/${id}/comments`);
+    if (live) return live;
+    const offline = local.comments(id);
+    if (!offline) throw new Error(`Аналитика комментариев для ${id} недоступна офлайн`);
     return offline;
   },
   async filters(): Promise<Filters> {

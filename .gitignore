@@ -8,3 +8,5 @@ coverage/
 
 # build info
 *.tsbuildinfo
+.expo/
+mobile/dist/

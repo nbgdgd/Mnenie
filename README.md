@@ -24,13 +24,21 @@ mnenie/
 │       ├── analysis/      # движок агрегации метрик и вердикта
 │       ├── db/            # схема (schema.sql), сид-данные, in-memory store
 │       └── routes/        # REST API
-├── web/             # Frontend (React + Vite + Recharts)
+├── web/             # Frontend для браузера (React + Vite + Recharts)
 │   └── src/
 │       ├── pages/         # Лента, Детальная новость, Рейтинги
 │       └── ui.tsx         # gauge, графики, бейджи
+├── mobile/          # 📱 Android-приложение (React Native + Expo)
+│   ├── App.tsx            # навигация (табы + стек)
+│   └── src/
+│       ├── screens/       # Лента, Детальная новость, Рейтинги
+│       └── components/    # Gauge, Donut, LineChart, BarChart (react-native-svg)
 ├── ARCHITECTURE.md  # полная архитектура, БД, ML, пайплайн, экраны
 └── API.md           # справочник REST API
 ```
+
+И веб-, и мобильное приложение используют **один и тот же backend** и
+аналитический движок.
 
 ## Возможности
 
@@ -80,7 +88,41 @@ npm run dev:web
 ```bash
 npm run seed --workspace=server   # прогнать анализ по всем новостям в консоли
 npm test  --workspace=server      # юнит-тесты NLP-движка
-npm run build                     # сборка backend + frontend
+npm run build                     # сборка backend + web-frontend
+```
+
+## 📱 Android-приложение (React Native + Expo)
+
+Нативное приложение под Android живёт в `mobile/` и подключается к тому же
+backend.
+
+```bash
+cd mobile
+npm install
+npm start            # запустить Metro; нажать "a" для Android (эмулятор/устройство)
+# либо:
+npm run android      # сразу собрать и запустить на Android
+```
+
+**Адрес backend.** По умолчанию приложение обращается к `http://10.0.2.2:4000`
+(так Android-эмулятор видит `localhost` host-машины). Для физического телефона
+укажите IP компьютера в `mobile/app.json` → `expo.extra.apiBase`
+(например `http://192.168.1.50:4000`) или через переменную
+`EXPO_PUBLIC_API_BASE`. Телефон и компьютер должны быть в одной сети.
+
+**Сборка APK/AAB** (нужен аккаунт Expo и EAS CLI):
+
+```bash
+cd mobile
+npx eas build -p android --profile preview   # APK для установки на устройство
+```
+
+Локально проверить, что приложение собирается без эмулятора:
+
+```bash
+cd mobile
+npm run typecheck    # проверка типов
+npm run bundle       # экспорт Android JS-бандла (Metro)
 ```
 
 ## Стек

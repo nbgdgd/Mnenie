@@ -1,0 +1,21 @@
+{
+  "name": "mnenie",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mnenie — анализ резонансных новостей и прогноз общественной реакции",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    "dev": "npm run dev --workspace=server & npm run dev --workspace=web",
+    "dev:server": "npm run dev --workspace=server",
+    "dev:web": "npm run dev --workspace=web",
+    "build": "npm run build --workspace=server && npm run build --workspace=web",
+    "seed": "npm run seed --workspace=server"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

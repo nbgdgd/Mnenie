@@ -42,28 +42,33 @@ function TriBar({ s, a, n }: { s: number; a: number; n: number }) {
   );
 }
 
+const SENTIMENT_ICON: Record<string, string> = { support: '👍', against: '👎', neutral: '😐' };
+
 function CommentCard({ c }: { c: CommentDetail }) {
   const controversial = c.controversyScore >= 60;
   const suspicious = c.cluster === 'suspicious';
+  const sentColor = SENTIMENT_COLOR[c.sentiment];
+  // рамка сверху: подозрительный → warn, противоречивый → red, иначе по тону
   const borderColor = suspicious ? COLORS.warn : controversial ? COLORS.disbelieve : COLORS.border;
   const borderWidth = suspicious || controversial ? 1.5 : 1;
   return (
-    <View style={[styles.comment, { borderColor, borderWidth }]}>
+    <View style={[styles.comment, { borderColor, borderWidth, borderLeftColor: sentColor, borderLeftWidth: 5 }]}>
+      {/* СТАТУС — крупная цветная плашка сверху */}
       <View style={styles.cHead}>
-        <Text style={styles.cAuthor} numberOfLines={1}>@{c.author}</Text>
-        <View style={[styles.sentTag, { backgroundColor: SENTIMENT_COLOR[c.sentiment] + '22' }]}>
-          <Text style={[styles.sentTagText, { color: SENTIMENT_COLOR[c.sentiment] }]}>
-            {SENTIMENT_LABEL[c.sentiment]}
+        <View style={[styles.statusPill, { backgroundColor: sentColor }]}>
+          <Text style={styles.statusPillText}>
+            {SENTIMENT_ICON[c.sentiment]} {SENTIMENT_LABEL[c.sentiment].toUpperCase()}
           </Text>
         </View>
+        <Text style={styles.cAuthor} numberOfLines={1}>@{c.author}</Text>
       </View>
       <Text style={styles.cText}>{c.text}</Text>
       <View style={styles.markers}>
-        <Marker label="controversy" value={c.controversyScore} color={trustColor(100 - c.controversyScore)} />
-        <Marker label="bot" value={c.botProbability} suffix="%" color={c.botProbability >= 50 ? COLORS.warn : COLORS.muted} />
+        <Marker label="спорность" value={c.controversyScore} color={trustColor(100 - c.controversyScore)} />
+        <Marker label="боты" value={c.botProbability} suffix="%" color={c.botProbability >= 50 ? COLORS.warn : COLORS.muted} />
         <View style={styles.marker}>
           <Text style={[styles.markerVal, { color: FLAG_COLOR[c.influence] }]}>{FLAG_LABEL[c.influence]}</Text>
-          <Text style={styles.markerLabel}>influence</Text>
+          <Text style={styles.markerLabel}>влияние</Text>
         </View>
         {c.likes > 0 && <Marker label="лайки" value={c.likes} color={COLORS.muted} />}
       </View>
@@ -71,6 +76,7 @@ function CommentCard({ c }: { c: CommentDetail }) {
         {controversial && <Badge tone="warn">⚡ противоречивый</Badge>}
         {suspicious && <Badge tone="warn">🤖 подозрительный</Badge>}
         {c.isRepetitive && <Badge tone="muted">🔁 повтор</Badge>}
+        {c.cluster === 'minority' && <Badge tone="info">💬 редкое мнение</Badge>}
       </View>
     </View>
   );
@@ -242,10 +248,10 @@ const styles = StyleSheet.create({
   chipText: { color: COLORS.muted, fontSize: 13 },
   chipTextActive: { color: COLORS.accent },
   comment: { backgroundColor: COLORS.panel, borderRadius: 12, padding: 12, marginBottom: 10 },
-  cHead: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 8, marginBottom: 6 },
-  cAuthor: { color: COLORS.accent, fontSize: 13, fontWeight: '600', flex: 1 },
-  sentTag: { paddingHorizontal: 8, paddingVertical: 3, borderRadius: 6 },
-  sentTagText: { fontSize: 11, fontWeight: '700' },
+  cHead: { flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 8 },
+  cAuthor: { color: COLORS.muted, fontSize: 12, fontWeight: '600', flex: 1, textAlign: 'right' },
+  statusPill: { paddingHorizontal: 10, paddingVertical: 4, borderRadius: 6 },
+  statusPillText: { fontSize: 12, fontWeight: '800', color: '#0b1120' },
   cText: { color: COLORS.text, fontSize: 14, lineHeight: 20 },
   markers: { flexDirection: 'row', gap: 16, marginTop: 10, flexWrap: 'wrap' },
   marker: { alignItems: 'flex-start' },

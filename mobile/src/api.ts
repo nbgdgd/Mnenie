@@ -1,17 +1,23 @@
 import Constants from 'expo-constants';
 import type { CommentsAnalytics, Filters, NewsAnalysis, NewsCard, Stats } from './types';
-import snapshot from '../assets/snapshot.json';
+import bundled from '../assets/snapshot.json';
 
-// Базовый адрес backend (если запущен). По умолчанию — 10.0.2.2 (host-машина из
-// Android-эмулятора). Для физического устройства задайте IP компьютера в
+// Базовый адрес backend (если запущен и доступен). По умолчанию — 10.0.2.2
+// (host-машина из Android-эмулятора). Для физического устройства задайте IP в
 // app.json → expo.extra.apiBase или EXPO_PUBLIC_API_BASE.
-export const API_BASE: string =
-  process.env.EXPO_PUBLIC_API_BASE ||
-  (Constants.expoConfig?.extra as { apiBase?: string } | undefined)?.apiBase ||
-  'http://10.0.2.2:4000';
+const extra = Constants.expoConfig?.extra as { apiBase?: string; snapshotUrl?: string } | undefined;
 
-// Предрасчитанный снапшот реальных новостей (Hacker News), вшитый в APK.
-// Формируется `npm run ingest --workspace=server`. Приложение работает офлайн.
+export const API_BASE: string =
+  process.env.EXPO_PUBLIC_API_BASE || extra?.apiBase || 'http://10.0.2.2:4000';
+
+// Удалённый снапшот: свежие данные тянутся ПО СЕТИ при запуске (обновляется при
+// каждом `npm run ingest` + push), с откатом на вшитый в APK, если сети нет.
+// Так приложение работает и офлайн, и получает новые новости без пересборки.
+const REMOTE_SNAPSHOT_URL: string =
+  process.env.EXPO_PUBLIC_SNAPSHOT_URL ||
+  extra?.snapshotUrl ||
+  'https://raw.githubusercontent.com/nbgdgd/Mnenie/refs/heads/claude/news-opinion-prediction-app-6k1eqb/mobile/assets/snapshot.json';
+
 interface Snapshot {
   generatedAt: string;
   cards: NewsCard[];
@@ -22,9 +28,30 @@ interface Snapshot {
   controversial: NewsCard[];
   polarized: NewsCard[];
 }
-const SNAP = snapshot as unknown as Snapshot;
 
-export const snapshotGeneratedAt = SNAP.generatedAt;
+const BUNDLED = bundled as unknown as Snapshot;
+
+// Мемоизированная загрузка снапшота: сначала пробуем сеть (свежие данные),
+// иначе — вшитый в APK. Кэшируется на время сессии.
+let snapshotPromise: Promise<Snapshot> | null = null;
+export function loadSnapshot(force = false): Promise<Snapshot> {
+  if (snapshotPromise && !force) return snapshotPromise;
+  snapshotPromise = (async () => {
+    try {
+      const ctrl = new AbortController();
+      const t = setTimeout(() => ctrl.abort(), 7000);
+      const res = await fetch(`${REMOTE_SNAPSHOT_URL}?t=${Date.now()}`, { signal: ctrl.signal });
+      clearTimeout(t);
+      if (!res.ok) throw new Error(`${res.status}`);
+      const remote = (await res.json()) as Snapshot;
+      if (remote?.cards?.length) return remote;
+      throw new Error('empty');
+    } catch {
+      return BUNDLED; // офлайн-фолбэк
+    }
+  })();
+  return snapshotPromise;
+}
 
 export interface FeedQuery {
   country?: string;
@@ -33,9 +60,8 @@ export interface FeedQuery {
   sort?: 'recent' | 'controversial' | 'trust' | 'campaigns';
 }
 
-// ---- офлайн-реализация поверх снапшота (фильтры/сортировка на клиенте) ----
-function localFeed(q: FeedQuery = {}): NewsCard[] {
-  let items = SNAP.cards.slice();
+function localFeed(snap: Snapshot, q: FeedQuery = {}): NewsCard[] {
+  let items = snap.cards.slice();
   if (q.country) items = items.filter((c) => c.news.country === q.country);
   if (q.topic) items = items.filter((c) => c.news.topic === q.topic);
   if (q.q) {
@@ -62,17 +88,7 @@ function localFeed(q: FeedQuery = {}): NewsCard[] {
   return items;
 }
 
-const local = {
-  feed: (q: FeedQuery = {}) => localFeed(q),
-  news: (id: string) => SNAP.analyses[id] ?? null,
-  comments: (id: string) => SNAP.commentsAnalytics?.[id] ?? null,
-  filters: () => SNAP.filters,
-  stats: () => SNAP.stats,
-  controversial: () => SNAP.controversial,
-  polarized: () => SNAP.polarized,
-};
-
-// ---- сетевой клиент с коротким таймаутом и откатом на снапшот ----
+// ---- live-backend с коротким таймаутом (если поднят), иначе снапшот ----
 async function tryGet<T>(path: string): Promise<T | null> {
   try {
     const ctrl = new AbortController();
@@ -95,32 +111,36 @@ function qs(q: FeedQuery): string {
 
 export const api = {
   async feed(q: FeedQuery = {}): Promise<NewsCard[]> {
-    return (await tryGet<NewsCard[]>(`/news${qs(q)}`)) ?? local.feed(q);
+    const live = await tryGet<NewsCard[]>(`/news${qs(q)}`);
+    if (live) return live;
+    return localFeed(await loadSnapshot(), q);
   },
   async news(id: string): Promise<NewsAnalysis> {
     const live = await tryGet<NewsAnalysis>(`/news/${id}`);
     if (live) return live;
-    const offline = local.news(id);
-    if (!offline) throw new Error(`Новость ${id} не найдена в офлайн-данных`);
+    const snap = await loadSnapshot();
+    const offline = snap.analyses[id];
+    if (!offline) throw new Error(`Новость ${id} не найдена`);
     return offline;
   },
   async comments(id: string): Promise<CommentsAnalytics> {
     const live = await tryGet<CommentsAnalytics>(`/news/${id}/comments`);
     if (live) return live;
-    const offline = local.comments(id);
-    if (!offline) throw new Error(`Аналитика комментариев для ${id} недоступна офлайн`);
+    const snap = await loadSnapshot();
+    const offline = snap.commentsAnalytics?.[id];
+    if (!offline) throw new Error(`Аналитика комментариев для ${id} недоступна`);
     return offline;
   },
   async filters(): Promise<Filters> {
-    return (await tryGet<Filters>('/filters')) ?? local.filters();
+    return (await tryGet<Filters>('/filters')) ?? (await loadSnapshot()).filters;
   },
   async stats(): Promise<Stats> {
-    return (await tryGet<Stats>('/stats')) ?? local.stats();
+    return (await tryGet<Stats>('/stats')) ?? (await loadSnapshot()).stats;
   },
   async controversial(): Promise<NewsCard[]> {
-    return (await tryGet<NewsCard[]>('/rankings/controversial')) ?? local.controversial();
+    return (await tryGet<NewsCard[]>('/rankings/controversial')) ?? (await loadSnapshot()).controversial;
   },
   async polarized(): Promise<NewsCard[]> {
-    return (await tryGet<NewsCard[]>('/rankings/polarized')) ?? local.polarized();
+    return (await tryGet<NewsCard[]>('/rankings/polarized')) ?? (await loadSnapshot()).polarized;
   },
 };

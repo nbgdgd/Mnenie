@@ -159,11 +159,22 @@ export interface CommentsAnalytics {
 
 export interface Filters { countries: string[]; topics: string[]; }
 
+export interface SourceStat { id: string; name: string; news: number; comments: number; }
+export interface TopicStat { topic: string; news: number; }
+
 export interface Stats {
   totalNews: number;
+  totalComments: number;
+  totalSources: number;
   avgTrustIndex: number;
   avgPolarization: number;
+  avgControversy: number;
+  avgBotLikelihood: number;
+  avgInfluence: number;
   campaignsDetected: number;
+  influenceAlerts: number;
   topics: number;
   countries: number;
+  bySource: SourceStat[];
+  byTopic: TopicStat[];
 }

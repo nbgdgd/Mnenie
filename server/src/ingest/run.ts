@@ -14,6 +14,7 @@ import { ingestLobsters } from './lobsters.js';
 import { ingestLemmy } from './lemmy.js';
 import { ingestDtf, ingestVc } from './osnova.js';
 import { ingestHabr } from './habr.js';
+import { ingestDevto } from './devto.js';
 import { translateRu, isRussian } from './translate.js';
 import { pool } from './util.js';
 
@@ -98,7 +99,8 @@ async function main() {
     safe('Lemmy', () => ingestLemmy({ postCount: 7, commentsPerPost: 24 })),
     safe('DTF (RU)', () => ingestDtf({ entryCount: 8, commentsPerEntry: 45 })),
     safe('VC.ru (RU)', () => ingestVc({ entryCount: 8, commentsPerEntry: 45 })),
-    safe('Habr (RU)', () => ingestHabr({ articleCount: 8, commentsPerArticle: 45 })),
+    safe('Habr (RU/софт)', () => ingestHabr({ articleCount: 10, commentsPerArticle: 45 })),
+    safe('Dev.to (софт)', () => ingestDevto({ articleCount: 6, commentsPerArticle: 24 })),
   ]);
   const { sources, news, comments } = cleanup(merge(parts));
   console.log(`Собрано: ${news.length} новостей, ${comments.length} комментариев, ${sources.length} источников.`);
@@ -145,7 +147,7 @@ async function main() {
   };
 
   // разбивка по источникам и темам (расширенная статистика)
-  const platformSources = sources.filter((s) => ['hn', 'lobsters', 'lemmy', 'dtf', 'vc', 'habr'].includes(s.id));
+  const platformSources = sources.filter((s) => ['hn', 'lobsters', 'lemmy', 'dtf', 'vc', 'habr', 'devto'].includes(s.id));
   const bySource = platformSources.map((s) => ({
     id: s.id,
     name: s.name,

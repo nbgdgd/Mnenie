@@ -32,12 +32,19 @@ export async function ingestHabr(opts: { articleCount?: number; commentsPerArtic
   const articleCount = opts.articleCount ?? 8;
   const commentsPerArticle = opts.commentsPerArticle ?? 40;
 
-  const list = await fetchJson<HabrList>(
-    `${BASE}/articles/?fl=ru&hl=ru&sort=rating&types[]=article&page=1`,
-  );
-  const refs = list?.publicationRefs || {};
-  const articles = Object.values(refs)
-    .filter((a) => (a.statistics?.commentsCount ?? 0) >= 5 && a.titleHtml)
+  // тянем несколько страниц (rating + daily), чтобы набрать статьи с обсуждением
+  const refsAll: Record<string, HabrRef> = {};
+  const feeds = [
+    'sort=rating&types[]=article&page=1',
+    'sort=rating&types[]=article&page=2',
+    'sort=date&types[]=article&period=daily&page=1',
+  ];
+  for (const f of feeds) {
+    const list = await fetchJson<HabrList>(`${BASE}/articles/?fl=ru&hl=ru&${f}`);
+    Object.assign(refsAll, list?.publicationRefs || {});
+  }
+  const articles = Object.values(refsAll)
+    .filter((a) => (a.statistics?.commentsCount ?? 0) >= 4 && a.titleHtml)
     .sort((a, b) => (b.statistics?.commentsCount ?? 0) - (a.statistics?.commentsCount ?? 0))
     .slice(0, articleCount);
 

@@ -10,3 +10,6 @@ coverage/
 *.tsbuildinfo
 .expo/
 mobile/dist/
+
+# apksigner v4 signature sidecar
+*.idsig

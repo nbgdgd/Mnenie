@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 import { Text } from 'react-native';
 import { COLORS } from './src/theme';
+import AppsScreen from './src/screens/AppsScreen';
 import CommentsScreen from './src/screens/CommentsScreen';
 import DetailScreen from './src/screens/DetailScreen';
 import FeedScreen from './src/screens/FeedScreen';
@@ -83,6 +84,7 @@ export default function App() {
         }}
       >
         <Tab.Screen name="Лента" component={FeedStack} options={{ tabBarIcon: tabIcon('📰') }} />
+        <Tab.Screen name="Программы" component={AppsScreen} options={{ tabBarIcon: tabIcon('📱'), headerShown: true, ...screenOptions, title: '📱 Программы' }} />
         <Tab.Screen name="Рейтинги" component={RankingsStack} options={{ tabBarIcon: tabIcon('🔥') }} />
       </Tab.Navigator>
     </NavigationContainer>

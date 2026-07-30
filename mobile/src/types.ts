@@ -159,6 +159,29 @@ export interface CommentsAnalytics {
 
 export interface Filters { countries: string[]; topics: string[]; }
 
+// ---- Каталог приложений («Программы») ----
+export type AppVerdict = 'excellent' | 'good' | 'has_issues' | 'avoid';
+
+export interface AppAlternative { id: string; name: string; reason: string; }
+
+export interface AppItem {
+  id: string;
+  name: string;
+  emoji: string;
+  category: string;
+  score: number; // 0..100
+  verdict: AppVerdict;
+  pros: string[];
+  cons: string[];
+  alternative: AppAlternative | null;
+}
+
+export interface AppsCatalog {
+  generatedAt: string;
+  categories: string[];
+  apps: AppItem[];
+}
+
 export interface SourceStat { id: string; name: string; news: number; comments: number; }
 export interface TopicStat { topic: string; news: number; }
 

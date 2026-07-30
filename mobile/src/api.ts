@@ -39,12 +39,22 @@ export function loadSnapshot(force = false): Promise<Snapshot> {
   snapshotPromise = (async () => {
     try {
       const ctrl = new AbortController();
-      const t = setTimeout(() => ctrl.abort(), 7000);
-      const res = await fetch(`${REMOTE_SNAPSHOT_URL}?t=${Date.now()}`, { signal: ctrl.signal });
+      const t = setTimeout(() => ctrl.abort(), 9000);
+      const res = await fetch(`${REMOTE_SNAPSHOT_URL}?t=${Date.now()}`, {
+        signal: ctrl.signal,
+        cache: 'no-store',
+        headers: { 'Cache-Control': 'no-cache' },
+      });
       clearTimeout(t);
       if (!res.ok) throw new Error(`${res.status}`);
       const remote = (await res.json()) as Snapshot;
-      if (remote?.cards?.length) return remote;
+      // берём более СВЕЖИЙ из двух: если CDN отдал устаревшую копию — не
+      // ухудшаем данные, оставляем вшитый снапшот.
+      if (remote?.cards?.length) {
+        const rt = Date.parse(remote.generatedAt || '') || 0;
+        const bt = Date.parse(BUNDLED.generatedAt || '') || 0;
+        return rt >= bt ? remote : BUNDLED;
+      }
       throw new Error('empty');
     } catch {
       return BUNDLED; // офлайн-фолбэк

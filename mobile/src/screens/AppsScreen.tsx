@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react';
-import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
+import { useEffect, useMemo, useState } from 'react';
+import { FlatList, Linking, Pressable, StyleSheet, Text, View } from 'react-native';
 import catalog from '../../assets/apps.json';
 import { Badge, Metric, Section } from '../components/common';
 import { COLORS } from '../theme';
@@ -19,10 +19,12 @@ type Filter = 'mine' | 'replace' | 'all' | string;
 function AppCard({
   app,
   mine,
+  detected,
   onToggleMine,
 }: {
   app: AppItem;
   mine: boolean;
+  detected: boolean;
   onToggleMine: () => void;
 }) {
   const v = VERDICT[app.verdict];
@@ -33,7 +35,7 @@ function AppCard({
         <Text style={styles.emoji}>{app.emoji}</Text>
         <View style={{ flex: 1 }}>
           <Text style={styles.name}>{app.name}</Text>
-          <Text style={styles.cat}>{app.category}</Text>
+          <Text style={styles.cat}>{app.category}{detected ? ' · ✓ найдено на телефоне' : ''}</Text>
         </View>
         <View style={styles.scoreBox}>
           <Text style={[styles.score, { color: v.color }]}>{app.score}</Text>
@@ -59,21 +61,56 @@ function AppCard({
         </View>
       )}
 
-      <Pressable onPress={onToggleMine} style={[styles.mineBtn, mine && styles.mineBtnActive]}>
-        <Text style={[styles.mineText, mine && styles.mineTextActive]}>
-          {mine ? '★ У меня стоит' : '☆ Отметить «у меня стоит»'}
-        </Text>
-      </Pressable>
+      {detected ? (
+        <View style={[styles.mineBtn, styles.mineBtnActive]}>
+          <Text style={[styles.mineText, styles.mineTextActive]}>✓ Определено автоматически</Text>
+        </View>
+      ) : (
+        <Pressable onPress={onToggleMine} style={[styles.mineBtn, mine && styles.mineBtnActive]}>
+          <Text style={[styles.mineText, mine && styles.mineTextActive]}>
+            {mine ? '★ У меня стоит' : '☆ Отметить «у меня стоит»'}
+          </Text>
+        </Pressable>
+      )}
     </View>
   );
 }
 
 export default function AppsScreen() {
-  const [mine, setMine] = useState<Set<string>>(new Set());
+  const [manual, setManual] = useState<Set<string>>(new Set());
+  const [detected, setDetected] = useState<Set<string>>(new Set());
+  const [scanned, setScanned] = useState(false);
   const [filter, setFilter] = useState<Filter>('all');
 
+  // Автоопределение установленных приложений: пробуем открыть URL-схему каждого
+  // (Linking.canOpenURL). Работает при разрешении запроса пакетов в манифесте.
+  useEffect(() => {
+    let alive = true;
+    (async () => {
+      const found = new Set<string>();
+      for (const a of CAT.apps) {
+        if (!a.scheme) continue;
+        try {
+          if (await Linking.canOpenURL(`${a.scheme}://`)) found.add(a.id);
+        } catch {
+          /* схема недоступна — пропускаем */
+        }
+      }
+      if (alive) {
+        setDetected(found);
+        setScanned(true);
+      }
+    })();
+    return () => {
+      alive = false;
+    };
+  }, []);
+
+  // «Мои» = найденные автоматически ∪ отмеченные вручную
+  const mine = useMemo(() => new Set([...detected, ...manual]), [detected, manual]);
+
   const toggleMine = (id: string) =>
-    setMine((prev) => {
+    setManual((prev) => {
       const next = new Set(prev);
       next.has(id) ? next.delete(id) : next.add(id);
       return next;
@@ -113,8 +150,9 @@ export default function AppsScreen() {
           <Metric label="Твоих к замене" value={mineReplace.length} color={COLORS.disbelieve} />
         </View>
         <Text style={styles.hint}>
-          Отметь приложения «у меня стоит» — и фильтр «Мои» покажет твой список с оценками и что
-          из этого стоит заменить на лучший аналог. Скажи свой список — вшью его заранее.
+          {scanned
+            ? `🔍 Автоопределение: найдено ${detected.size} установленных. Остальные можно отметить вручную кнопкой «у меня стоит».`
+            : '🔍 Сканирую установленные приложения…'}
         </Text>
       </Section>
 
@@ -151,7 +189,12 @@ export default function AppsScreen() {
       keyExtractor={(a) => a.id}
       ListHeaderComponent={header}
       renderItem={({ item }) => (
-        <AppCard app={item} mine={mine.has(item.id)} onToggleMine={() => toggleMine(item.id)} />
+        <AppCard
+          app={item}
+          mine={mine.has(item.id)}
+          detected={detected.has(item.id)}
+          onToggleMine={() => toggleMine(item.id)}
+        />
       )}
       ListEmptyComponent={<Text style={styles.empty}>Пусто. Отметь приложения «у меня стоит».</Text>}
       initialNumToRender={10}

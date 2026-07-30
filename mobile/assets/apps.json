@@ -1,107 +1,663 @@
 {
   "generatedAt": "2026-07-29T00:00:00Z",
   "categories": [
-    "Мессенджеры", "Браузеры", "Почта", "Заметки", "Облако", "VPN",
-    "Пароли", "Плеер", "Клавиатура", "Галерея", "Лаунчер", "Офис", "Навигация", "Файлы"
+    "Мессенджеры",
+    "Браузеры",
+    "Почта",
+    "Заметки",
+    "Облако",
+    "VPN",
+    "Пароли",
+    "Плеер",
+    "Клавиатура",
+    "Галерея",
+    "Лаунчер",
+    "Офис",
+    "Навигация",
+    "Файлы"
   ],
   "apps": [
-    { "id": "whatsapp", "name": "WhatsApp", "emoji": "💬", "category": "Мессенджеры", "score": 62, "verdict": "has_issues",
-      "pros": ["E2E-шифрование по умолчанию", "Огромная аудитория"], "cons": ["Принадлежит Meta, сбор метаданных", "Закрытый код"],
-      "alternative": { "id": "signal", "name": "Signal", "reason": "то же шифрование, но без сбора метаданных и открытый код" } },
-    { "id": "telegram", "name": "Telegram", "emoji": "✈️", "category": "Мессенджеры", "score": 80, "verdict": "good",
-      "pros": ["Быстрый, облачная история", "Каналы и боты"], "cons": ["Обычные чаты НЕ E2E по умолчанию"],
-      "alternative": null },
-    { "id": "signal", "name": "Signal", "emoji": "🔒", "category": "Мессенджеры", "score": 92, "verdict": "excellent",
-      "pros": ["E2E по умолчанию", "Открытый код, минимум метаданных"], "cons": ["Нужен номер телефона", "Меньше аудитория"],
-      "alternative": null },
-    { "id": "viber", "name": "Viber", "emoji": "🟣", "category": "Мессенджеры", "score": 55, "verdict": "has_issues",
-      "pros": ["E2E-шифрование"], "cons": ["Реклама, трекеры", "Тяжёлый"],
-      "alternative": { "id": "telegram", "name": "Telegram", "reason": "быстрее, без рекламы, богаче функционал" } },
-
-    { "id": "chrome", "name": "Google Chrome", "emoji": "🌐", "category": "Браузеры", "score": 60, "verdict": "has_issues",
-      "pros": ["Быстрый, стабильный"], "cons": ["Плотная телеметрия Google", "Слабая защита от трекеров"],
-      "alternative": { "id": "brave", "name": "Brave", "reason": "тот же движок, но встроенный блок рекламы и трекеров" } },
-    { "id": "firefox", "name": "Firefox", "emoji": "🦊", "category": "Браузеры", "score": 88, "verdict": "excellent",
-      "pros": ["Расширения, приватность", "Открытый код"], "cons": ["Иногда медленнее на тяжёлых сайтах"], "alternative": null },
-    { "id": "brave", "name": "Brave", "emoji": "🦁", "category": "Браузеры", "score": 86, "verdict": "excellent",
-      "pros": ["Встроенный блок рекламы/трекеров", "Быстрый (Chromium)"], "cons": ["Крипто-функции лишние для многих"], "alternative": null },
-    { "id": "yandex-browser", "name": "Яндекс Браузер", "emoji": "🟡", "category": "Браузеры", "score": 58, "verdict": "has_issues",
-      "pros": ["Турбо-режим, Алиса"], "cons": ["Много телеметрии и рекламы"],
-      "alternative": { "id": "firefox", "name": "Firefox", "reason": "приватнее и без навязчивой рекламы" } },
-
-    { "id": "gmail", "name": "Gmail", "emoji": "📧", "category": "Почта", "score": 70, "verdict": "good",
-      "pros": ["Удобный, надёжный", "Хорошие фильтры"], "cons": ["Google анализирует контекст письма"],
-      "alternative": { "id": "protonmail", "name": "Proton Mail", "reason": "E2E-шифрование и приватность по умолчанию" } },
-    { "id": "protonmail", "name": "Proton Mail", "emoji": "🔐", "category": "Почта", "score": 90, "verdict": "excellent",
-      "pros": ["E2E-шифрование", "Швейцария, приватность"], "cons": ["Бесплатный лимит места"], "alternative": null },
-
-    { "id": "notion", "name": "Notion", "emoji": "📝", "category": "Заметки", "score": 74, "verdict": "good",
-      "pros": ["Гибко, базы данных"], "cons": ["Всё в облаке компании", "Тормозит оффлайн"],
-      "alternative": { "id": "obsidian", "name": "Obsidian", "reason": "локальные файлы, работает оффлайн, приватно" } },
-    { "id": "obsidian", "name": "Obsidian", "emoji": "🪨", "category": "Заметки", "score": 89, "verdict": "excellent",
-      "pros": ["Локальное хранение (Markdown)", "Плагины, связи заметок"], "cons": ["Порог входа выше"], "alternative": null },
-    { "id": "google-keep", "name": "Google Keep", "emoji": "🟨", "category": "Заметки", "score": 68, "verdict": "good",
-      "pros": ["Простой, быстрый"], "cons": ["Данные у Google", "Мало форматирования"], "alternative": null },
-
-    { "id": "google-drive", "name": "Google Drive", "emoji": "📁", "category": "Облако", "score": 70, "verdict": "good",
-      "pros": ["15 ГБ бесплатно", "Интеграция с Docs"], "cons": ["Нет E2E-шифрования"],
-      "alternative": { "id": "proton-drive", "name": "Proton Drive", "reason": "сквозное шифрование файлов" } },
-    { "id": "proton-drive", "name": "Proton Drive", "emoji": "🗄️", "category": "Облако", "score": 85, "verdict": "excellent",
-      "pros": ["E2E-шифрование", "Приватность"], "cons": ["Меньше бесплатного места"], "alternative": null },
-
-    { "id": "free-vpn", "name": "Бесплатные VPN", "emoji": "⚠️", "category": "VPN", "score": 25, "verdict": "avoid",
-      "pros": ["Бесплатно"], "cons": ["Часто продают трафик/данные", "Реклама, утечки"],
-      "alternative": { "id": "proton-vpn", "name": "Proton VPN", "reason": "есть честный бесплатный тариф без продажи данных" } },
-    { "id": "proton-vpn", "name": "Proton VPN", "emoji": "🛡️", "category": "VPN", "score": 88, "verdict": "excellent",
-      "pros": ["Бесплатный тариф без логов", "Открытый код"], "cons": ["Бесплатно — меньше серверов"], "alternative": null },
-    { "id": "mullvad", "name": "Mullvad VPN", "emoji": "🦡", "category": "VPN", "score": 90, "verdict": "excellent",
-      "pros": ["Без аккаунта, анонимно", "Без логов"], "cons": ["Только платно"], "alternative": null },
-
-    { "id": "lastpass", "name": "LastPass", "emoji": "🔓", "category": "Пароли", "score": 45, "verdict": "has_issues",
-      "pros": ["Популярный"], "cons": ["Были крупные утечки", "Урезали бесплатный тариф"],
-      "alternative": { "id": "bitwarden", "name": "Bitwarden", "reason": "открытый код, надёжнее, щедрый бесплатный тариф" } },
-    { "id": "bitwarden", "name": "Bitwarden", "emoji": "🔑", "category": "Пароли", "score": 92, "verdict": "excellent",
-      "pros": ["Открытый код", "Бесплатно и кроссплатформенно"], "cons": ["Интерфейс простоват"], "alternative": null },
-    { "id": "keepassdx", "name": "KeePassDX", "emoji": "🗝️", "category": "Пароли", "score": 87, "verdict": "excellent",
-      "pros": ["Полностью локально", "Открытый код"], "cons": ["Ручная синхронизация"], "alternative": null },
-
-    { "id": "vlc", "name": "VLC", "emoji": "🔺", "category": "Плеер", "score": 93, "verdict": "excellent",
-      "pros": ["Играет всё", "Открытый код, без рекламы"], "cons": ["Интерфейс на любителя"], "alternative": null },
-    { "id": "mx-player", "name": "MX Player", "emoji": "▶️", "category": "Плеер", "score": 66, "verdict": "good",
-      "pros": ["Удобный, аппаратное декодирование"], "cons": ["Реклама, трекеры"],
-      "alternative": { "id": "vlc", "name": "VLC", "reason": "без рекламы и открытый код" } },
-
-    { "id": "gboard", "name": "Gboard", "emoji": "⌨️", "category": "Клавиатура", "score": 72, "verdict": "good",
-      "pros": ["Умный ввод, свайп"], "cons": ["Телеметрия Google"],
-      "alternative": { "id": "openboard", "name": "OpenBoard", "reason": "открытый код, без отправки данных" } },
-    { "id": "openboard", "name": "OpenBoard", "emoji": "🎹", "category": "Клавиатура", "score": 82, "verdict": "excellent",
-      "pros": ["Открытый код, приватно"], "cons": ["Нет облачного словаря"], "alternative": null },
-
-    { "id": "google-photos", "name": "Google Photos", "emoji": "🖼️", "category": "Галерея", "score": 71, "verdict": "good",
-      "pros": ["Умный поиск, бэкап"], "cons": ["Сканирование контента, лимит места"],
-      "alternative": { "id": "simple-gallery", "name": "Simple Gallery", "reason": "локально и приватно, без сканирования" } },
-    { "id": "simple-gallery", "name": "Simple Gallery Pro", "emoji": "📷", "category": "Галерея", "score": 84, "verdict": "excellent",
-      "pros": ["Локально, без интернета", "Открытый код"], "cons": ["Нет облачного бэкапа"], "alternative": null },
-
-    { "id": "nova-launcher", "name": "Nova Launcher", "emoji": "🚀", "category": "Лаунчер", "score": 85, "verdict": "excellent",
-      "pros": ["Гибкая настройка", "Быстрый"], "cons": ["Часть функций платные"], "alternative": null },
-
-    { "id": "ms-office", "name": "Microsoft Office", "emoji": "📊", "category": "Офис", "score": 74, "verdict": "good",
-      "pros": ["Стандарт де-факто", "Совместимость"], "cons": ["Подписка, тяжёлый"],
-      "alternative": { "id": "onlyoffice", "name": "OnlyOffice", "reason": "бесплатно, хорошая совместимость с форматами MS" } },
-    { "id": "onlyoffice", "name": "OnlyOffice", "emoji": "🧾", "category": "Офис", "score": 83, "verdict": "excellent",
-      "pros": ["Бесплатно, открытый код", "Совместим с docx/xlsx"], "cons": ["Меньше редких функций"], "alternative": null },
-
-    { "id": "google-maps", "name": "Google Maps", "emoji": "🗺️", "category": "Навигация", "score": 78, "verdict": "good",
-      "pros": ["Лучшие данные, пробки"], "cons": ["Плотное отслеживание местоположения"],
-      "alternative": { "id": "organic-maps", "name": "Organic Maps", "reason": "оффлайн-карты без слежки, открытый код" } },
-    { "id": "organic-maps", "name": "Organic Maps", "emoji": "🧭", "category": "Навигация", "score": 82, "verdict": "excellent",
-      "pros": ["Оффлайн, приватно", "Открытый код"], "cons": ["Нет пробок в реальном времени"], "alternative": null },
-
-    { "id": "cleaner-apps", "name": "«Чистильщики»/ускорители", "emoji": "🧹", "category": "Файлы", "score": 20, "verdict": "avoid",
-      "pros": ["Обещают ускорение"], "cons": ["Бесполезны на Android, реклама, шпионаж", "Сами жрут ресурсы"],
-      "alternative": { "id": "files-by-google", "name": "Files by Google", "reason": "штатная очистка без вреда и рекламы" } },
-    { "id": "files-by-google", "name": "Files by Google", "emoji": "🗂️", "category": "Файлы", "score": 73, "verdict": "good",
-      "pros": ["Лёгкий, чистит мусор", "Без агрессивной рекламы"], "cons": ["Телеметрия Google"], "alternative": null }
+    {
+      "id": "whatsapp",
+      "name": "WhatsApp",
+      "emoji": "💬",
+      "category": "Мессенджеры",
+      "score": 62,
+      "verdict": "has_issues",
+      "scheme": "whatsapp",
+      "package": "com.whatsapp",
+      "pros": [
+        "E2E-шифрование по умолчанию",
+        "Огромная аудитория"
+      ],
+      "cons": [
+        "Принадлежит Meta, сбор метаданных",
+        "Закрытый код"
+      ],
+      "alternative": {
+        "id": "signal",
+        "name": "Signal",
+        "reason": "то же шифрование, но без сбора метаданных и открытый код"
+      }
+    },
+    {
+      "id": "telegram",
+      "name": "Telegram",
+      "emoji": "✈️",
+      "category": "Мессенджеры",
+      "score": 80,
+      "verdict": "good",
+      "scheme": "tg",
+      "package": "org.telegram.messenger",
+      "pros": [
+        "Быстрый, облачная история",
+        "Каналы и боты"
+      ],
+      "cons": [
+        "Обычные чаты НЕ E2E по умолчанию"
+      ],
+      "alternative": null
+    },
+    {
+      "id": "signal",
+      "name": "Signal",
+      "emoji": "🔒",
+      "category": "Мессенджеры",
+      "score": 92,
+      "verdict": "excellent",
+      "scheme": "sgnl",
+      "package": "org.thoughtcrime.securesms",
+      "pros": [
+        "E2E по умолчанию",
+        "Открытый код, минимум метаданных"
+      ],
+      "cons": [
+        "Нужен номер телефона",
+        "Меньше аудитория"
+      ],
+      "alternative": null
+    },
+    {
+      "id": "viber",
+      "name": "Viber",
+      "emoji": "🟣",
+      "category": "Мессенджеры",
+      "score": 55,
+      "verdict": "has_issues",
+      "scheme": "viber",
+      "package": "com.viber.voip",
+      "pros": [
+        "E2E-шифрование"
+      ],
+      "cons": [
+        "Реклама, трекеры",
+        "Тяжёлый"
+      ],
+      "alternative": {
+        "id": "telegram",
+        "name": "Telegram",
+        "reason": "быстрее, без рекламы, богаче функционал"
+      }
+    },
+    {
+      "id": "chrome",
+      "name": "Google Chrome",
+      "emoji": "🌐",
+      "category": "Браузеры",
+      "score": 60,
+      "verdict": "has_issues",
+      "scheme": "googlechrome",
+      "package": "com.android.chrome",
+      "pros": [
+        "Быстрый, стабильный"
+      ],
+      "cons": [
+        "Плотная телеметрия Google",
+        "Слабая защита от трекеров"
+      ],
+      "alternative": {
+        "id": "brave",
+        "name": "Brave",
+        "reason": "тот же движок, но встроенный блок рекламы и трекеров"
+      }
+    },
+    {
+      "id": "firefox",
+      "name": "Firefox",
+      "emoji": "🦊",
+      "category": "Браузеры",
+      "score": 88,
+      "verdict": "excellent",
+      "scheme": "firefox",
+      "package": "org.mozilla.firefox",
+      "pros": [
+        "Расширения, приватность",
+        "Открытый код"
+      ],
+      "cons": [
+        "Иногда медленнее на тяжёлых сайтах"
+      ],
+      "alternative": null
+    },
+    {
+      "id": "brave",
+      "name": "Brave",
+      "emoji": "🦁",
+      "category": "Браузеры",
+      "score": 86,
+      "verdict": "excellent",
+      "package": "com.brave.browser",
+      "pros": [
+        "Встроенный блок рекламы/трекеров",
+        "Быстрый (Chromium)"
+      ],
+      "cons": [
+        "Крипто-функции лишние для многих"
+      ],
+      "alternative": null
+    },
+    {
+      "id": "yandex-browser",
+      "name": "Яндекс Браузер",
+      "emoji": "🟡",
+      "category": "Браузеры",
+      "score": 58,
+      "verdict": "has_issues",
+      "scheme": "yandexbrowser",
+      "package": "com.yandex.browser",
+      "pros": [
+        "Турбо-режим, Алиса"
+      ],
+      "cons": [
+        "Много телеметрии и рекламы"
+      ],
+      "alternative": {
+        "id": "firefox",
+        "name": "Firefox",
+        "reason": "приватнее и без навязчивой рекламы"
+      }
+    },
+    {
+      "id": "gmail",
+      "name": "Gmail",
+      "emoji": "📧",
+      "category": "Почта",
+      "score": 70,
+      "verdict": "good",
+      "pros": [
+        "Удобный, надёжный",
+        "Хорошие фильтры"
+      ],
+      "cons": [
+        "Google анализирует контекст письма"
+      ],
+      "alternative": {
+        "id": "protonmail",
+        "name": "Proton Mail",
+        "reason": "E2E-шифрование и приватность по умолчанию"
+      },
+      "scheme": "googlegmail",
+      "package": "com.google.android.gm"
+    },
+    {
+      "id": "protonmail",
+      "name": "Proton Mail",
+      "emoji": "🔐",
+      "category": "Почта",
+      "score": 90,
+      "verdict": "excellent",
+      "pros": [
+        "E2E-шифрование",
+        "Швейцария, приватность"
+      ],
+      "cons": [
+        "Бесплатный лимит места"
+      ],
+      "alternative": null,
+      "package": "ch.protonmail.android"
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "emoji": "📝",
+      "category": "Заметки",
+      "score": 74,
+      "verdict": "good",
+      "pros": [
+        "Гибко, базы данных"
+      ],
+      "cons": [
+        "Всё в облаке компании",
+        "Тормозит оффлайн"
+      ],
+      "alternative": {
+        "id": "obsidian",
+        "name": "Obsidian",
+        "reason": "локальные файлы, работает оффлайн, приватно"
+      },
+      "scheme": "notion",
+      "package": "notion.id"
+    },
+    {
+      "id": "obsidian",
+      "name": "Obsidian",
+      "emoji": "🪨",
+      "category": "Заметки",
+      "score": 89,
+      "verdict": "excellent",
+      "pros": [
+        "Локальное хранение (Markdown)",
+        "Плагины, связи заметок"
+      ],
+      "cons": [
+        "Порог входа выше"
+      ],
+      "alternative": null,
+      "scheme": "obsidian",
+      "package": "md.obsidian"
+    },
+    {
+      "id": "google-keep",
+      "name": "Google Keep",
+      "emoji": "🟨",
+      "category": "Заметки",
+      "score": 68,
+      "verdict": "good",
+      "pros": [
+        "Простой, быстрый"
+      ],
+      "cons": [
+        "Данные у Google",
+        "Мало форматирования"
+      ],
+      "alternative": null,
+      "package": "com.google.android.keep"
+    },
+    {
+      "id": "google-drive",
+      "name": "Google Drive",
+      "emoji": "📁",
+      "category": "Облако",
+      "score": 70,
+      "verdict": "good",
+      "pros": [
+        "15 ГБ бесплатно",
+        "Интеграция с Docs"
+      ],
+      "cons": [
+        "Нет E2E-шифрования"
+      ],
+      "alternative": {
+        "id": "proton-drive",
+        "name": "Proton Drive",
+        "reason": "сквозное шифрование файлов"
+      },
+      "package": "com.google.android.apps.docs"
+    },
+    {
+      "id": "proton-drive",
+      "name": "Proton Drive",
+      "emoji": "🗄️",
+      "category": "Облако",
+      "score": 85,
+      "verdict": "excellent",
+      "pros": [
+        "E2E-шифрование",
+        "Приватность"
+      ],
+      "cons": [
+        "Меньше бесплатного места"
+      ],
+      "alternative": null,
+      "package": "me.proton.android.drive"
+    },
+    {
+      "id": "free-vpn",
+      "name": "Бесплатные VPN",
+      "emoji": "⚠️",
+      "category": "VPN",
+      "score": 25,
+      "verdict": "avoid",
+      "pros": [
+        "Бесплатно"
+      ],
+      "cons": [
+        "Часто продают трафик/данные",
+        "Реклама, утечки"
+      ],
+      "alternative": {
+        "id": "proton-vpn",
+        "name": "Proton VPN",
+        "reason": "есть честный бесплатный тариф без продажи данных"
+      }
+    },
+    {
+      "id": "proton-vpn",
+      "name": "Proton VPN",
+      "emoji": "🛡️",
+      "category": "VPN",
+      "score": 88,
+      "verdict": "excellent",
+      "pros": [
+        "Бесплатный тариф без логов",
+        "Открытый код"
+      ],
+      "cons": [
+        "Бесплатно — меньше серверов"
+      ],
+      "alternative": null,
+      "package": "ch.protonvpn.android"
+    },
+    {
+      "id": "mullvad",
+      "name": "Mullvad VPN",
+      "emoji": "🦡",
+      "category": "VPN",
+      "score": 90,
+      "verdict": "excellent",
+      "pros": [
+        "Без аккаунта, анонимно",
+        "Без логов"
+      ],
+      "cons": [
+        "Только платно"
+      ],
+      "alternative": null,
+      "package": "net.mullvad.mullvadvpn"
+    },
+    {
+      "id": "lastpass",
+      "name": "LastPass",
+      "emoji": "🔓",
+      "category": "Пароли",
+      "score": 45,
+      "verdict": "has_issues",
+      "pros": [
+        "Популярный"
+      ],
+      "cons": [
+        "Были крупные утечки",
+        "Урезали бесплатный тариф"
+      ],
+      "alternative": {
+        "id": "bitwarden",
+        "name": "Bitwarden",
+        "reason": "открытый код, надёжнее, щедрый бесплатный тариф"
+      },
+      "package": "com.lastpass.lpandroid"
+    },
+    {
+      "id": "bitwarden",
+      "name": "Bitwarden",
+      "emoji": "🔑",
+      "category": "Пароли",
+      "score": 92,
+      "verdict": "excellent",
+      "pros": [
+        "Открытый код",
+        "Бесплатно и кроссплатформенно"
+      ],
+      "cons": [
+        "Интерфейс простоват"
+      ],
+      "alternative": null,
+      "package": "com.x8bit.bitwarden"
+    },
+    {
+      "id": "keepassdx",
+      "name": "KeePassDX",
+      "emoji": "🗝️",
+      "category": "Пароли",
+      "score": 87,
+      "verdict": "excellent",
+      "pros": [
+        "Полностью локально",
+        "Открытый код"
+      ],
+      "cons": [
+        "Ручная синхронизация"
+      ],
+      "alternative": null,
+      "package": "com.kunzisoft.keepass.free"
+    },
+    {
+      "id": "vlc",
+      "name": "VLC",
+      "emoji": "🔺",
+      "category": "Плеер",
+      "score": 93,
+      "verdict": "excellent",
+      "pros": [
+        "Играет всё",
+        "Открытый код, без рекламы"
+      ],
+      "cons": [
+        "Интерфейс на любителя"
+      ],
+      "alternative": null,
+      "scheme": "vlc",
+      "package": "org.videolan.vlc"
+    },
+    {
+      "id": "mx-player",
+      "name": "MX Player",
+      "emoji": "▶️",
+      "category": "Плеер",
+      "score": 66,
+      "verdict": "good",
+      "pros": [
+        "Удобный, аппаратное декодирование"
+      ],
+      "cons": [
+        "Реклама, трекеры"
+      ],
+      "alternative": {
+        "id": "vlc",
+        "name": "VLC",
+        "reason": "без рекламы и открытый код"
+      },
+      "package": "com.mxtech.videoplayer.ad"
+    },
+    {
+      "id": "gboard",
+      "name": "Gboard",
+      "emoji": "⌨️",
+      "category": "Клавиатура",
+      "score": 72,
+      "verdict": "good",
+      "pros": [
+        "Умный ввод, свайп"
+      ],
+      "cons": [
+        "Телеметрия Google"
+      ],
+      "alternative": {
+        "id": "openboard",
+        "name": "OpenBoard",
+        "reason": "открытый код, без отправки данных"
+      },
+      "package": "com.google.android.inputmethod.latin"
+    },
+    {
+      "id": "openboard",
+      "name": "OpenBoard",
+      "emoji": "🎹",
+      "category": "Клавиатура",
+      "score": 82,
+      "verdict": "excellent",
+      "pros": [
+        "Открытый код, приватно"
+      ],
+      "cons": [
+        "Нет облачного словаря"
+      ],
+      "alternative": null
+    },
+    {
+      "id": "google-photos",
+      "name": "Google Photos",
+      "emoji": "🖼️",
+      "category": "Галерея",
+      "score": 71,
+      "verdict": "good",
+      "pros": [
+        "Умный поиск, бэкап"
+      ],
+      "cons": [
+        "Сканирование контента, лимит места"
+      ],
+      "alternative": {
+        "id": "simple-gallery",
+        "name": "Simple Gallery",
+        "reason": "локально и приватно, без сканирования"
+      },
+      "package": "com.google.android.apps.photos"
+    },
+    {
+      "id": "simple-gallery",
+      "name": "Simple Gallery Pro",
+      "emoji": "📷",
+      "category": "Галерея",
+      "score": 84,
+      "verdict": "excellent",
+      "pros": [
+        "Локально, без интернета",
+        "Открытый код"
+      ],
+      "cons": [
+        "Нет облачного бэкапа"
+      ],
+      "alternative": null
+    },
+    {
+      "id": "nova-launcher",
+      "name": "Nova Launcher",
+      "emoji": "🚀",
+      "category": "Лаунчер",
+      "score": 85,
+      "verdict": "excellent",
+      "pros": [
+        "Гибкая настройка",
+        "Быстрый"
+      ],
+      "cons": [
+        "Часть функций платные"
+      ],
+      "alternative": null,
+      "package": "com.teslacoilsw.launcher"
+    },
+    {
+      "id": "ms-office",
+      "name": "Microsoft Office",
+      "emoji": "📊",
+      "category": "Офис",
+      "score": 74,
+      "verdict": "good",
+      "pros": [
+        "Стандарт де-факто",
+        "Совместимость"
+      ],
+      "cons": [
+        "Подписка, тяжёлый"
+      ],
+      "alternative": {
+        "id": "onlyoffice",
+        "name": "OnlyOffice",
+        "reason": "бесплатно, хорошая совместимость с форматами MS"
+      },
+      "package": "com.microsoft.office.officehubrow"
+    },
+    {
+      "id": "onlyoffice",
+      "name": "OnlyOffice",
+      "emoji": "🧾",
+      "category": "Офис",
+      "score": 83,
+      "verdict": "excellent",
+      "pros": [
+        "Бесплатно, открытый код",
+        "Совместим с docx/xlsx"
+      ],
+      "cons": [
+        "Меньше редких функций"
+      ],
+      "alternative": null,
+      "package": "com.onlyoffice.documents"
+    },
+    {
+      "id": "google-maps",
+      "name": "Google Maps",
+      "emoji": "🗺️",
+      "category": "Навигация",
+      "score": 78,
+      "verdict": "good",
+      "pros": [
+        "Лучшие данные, пробки"
+      ],
+      "cons": [
+        "Плотное отслеживание местоположения"
+      ],
+      "alternative": {
+        "id": "organic-maps",
+        "name": "Organic Maps",
+        "reason": "оффлайн-карты без слежки, открытый код"
+      },
+      "scheme": "comgooglemaps",
+      "package": "com.google.android.apps.maps"
+    },
+    {
+      "id": "organic-maps",
+      "name": "Organic Maps",
+      "emoji": "🧭",
+      "category": "Навигация",
+      "score": 82,
+      "verdict": "excellent",
+      "pros": [
+        "Оффлайн, приватно",
+        "Открытый код"
+      ],
+      "cons": [
+        "Нет пробок в реальном времени"
+      ],
+      "alternative": null,
+      "package": "app.organicmaps"
+    },
+    {
+      "id": "cleaner-apps",
+      "name": "«Чистильщики»/ускорители",
+      "emoji": "🧹",
+      "category": "Файлы",
+      "score": 20,
+      "verdict": "avoid",
+      "pros": [
+        "Обещают ускорение"
+      ],
+      "cons": [
+        "Бесполезны на Android, реклама, шпионаж",
+        "Сами жрут ресурсы"
+      ],
+      "alternative": {
+        "id": "files-by-google",
+        "name": "Files by Google",
+        "reason": "штатная очистка без вреда и рекламы"
+      }
+    },
+    {
+      "id": "files-by-google",
+      "name": "Files by Google",
+      "emoji": "🗂️",
+      "category": "Файлы",
+      "score": 73,
+      "verdict": "good",
+      "pros": [
+        "Лёгкий, чистит мусор",
+        "Без агрессивной рекламы"
+      ],
+      "cons": [
+        "Телеметрия Google"
+      ],
+      "alternative": null,
+      "package": "com.google.android.apps.nbu.files"
+    }
   ]
 }

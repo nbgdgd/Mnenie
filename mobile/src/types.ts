@@ -174,6 +174,8 @@ export interface AppItem {
   pros: string[];
   cons: string[];
   alternative: AppAlternative | null;
+  scheme?: string; // URL-схема для автоопределения установки
+  package?: string; // Android package id
 }
 
 export interface AppsCatalog {
